@@ -16,10 +16,13 @@ export default function Home() {
           </a>
           <Image src="/rust_lgo_720.png" alt="Rust Logo" width={50} height={50} />
         </h1>
-        <p className="text-xl">
-          the non-crap repo for Rust Developers.
-        </p>
+        <p className="text-xl">The non-crap repo for Rust Developers.</p>
         <GitHubStars repo="FrancescoXX/rustcrab" />
+        <br />
+        <br />
+        <p className="text-xl">🚧 Work in progress</p>
+        <br />
+        <p className="text-xl">Subscribe to get the latest updates</p>
         <SubstackEmbed /> {/* Embedding Substack iframe */}
       </main>
       <Footer />
