@@ -1,0 +1,5 @@
+issue_template:
+  feature: .github/ISSUE_TEMPLATE/feature.md
+  documentation: .github/ISSUE_TEMPLATE/documentation.md
+  bug: .github/ISSUE_TEMPLATE/bug.md
+  other: .github/ISSUE_TEMPLATE/other.md
