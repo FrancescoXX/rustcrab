@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 "use client"; // This directive marks the component as a Client Component
 
 import { useState, useEffect } from 'react';
@@ -30,7 +29,7 @@ export default function Header() {
 
   return (
     <header className="flex justify-end p-4">
-      <a href="https://github.com/your-github-repo" target="_blank" rel="noopener noreferrer" className="text-2xl mr-4">
+      <a href="https://github.com/FrancescoXX/rustcrab" target="_blank" rel="noopener noreferrer" className="text-2xl mr-4">
         <FaGithub />
       </a>
       <button onClick={toggleDarkMode} className="text-2xl">
