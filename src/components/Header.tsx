@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <header className="flex justify-end items-center p-4 space-x-4">
-      <a href="https://daily.dev" target="_blank" rel="noopener noreferrer" className="text-2xl" title="Rustdevs on daily.dev">
+      <a href="https://app.daily.dev/squads/rustdevs" target="_blank" rel="noopener noreferrer" className="text-2xl" title="Rustdevs on daily.dev">
         <Image src="/rust_lgo_720.png" alt="daily.dev" width={24} height={24} />
       </a>
       <a href="https://github.com/FrancescoXX/rustcrab" target="_blank" rel="noopener noreferrer" className="text-2xl" title="GitHub repository">
