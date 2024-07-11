@@ -1,4 +1,5 @@
 # Rustcrab
+![rust_background_720](https://github.com/FrancescoXX/rustcrab/assets/18360871/d4a783ef-e4a4-4192-a7a0-fc05df133425)
 
 Rustcrab is a non-crap repository for Rust developers, providing a variety of resources, tools, and guides to help you enhance your Rust programming skills.
 
