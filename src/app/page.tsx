@@ -16,7 +16,7 @@ export default function Home() {
           <Image src="/rust_lgo_720.png" alt="Rust Logo" width={50} height={50} />
         </h1>
         <p className="text-xl">
-          the non-crap repo for Rust Developers.
+          The non-crap repo for Rust Developers
         </p>
         <GitHubStars repo="FrancescoXX/rustcrab" />
       </main>
