@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import GitHubStars from '../components/GitHubStars';
+import SubstackEmbed from '../components/SubstackEmbed';
 
 export default function Home() {
   return (
@@ -16,9 +17,10 @@ export default function Home() {
           <Image src="/rust_lgo_720.png" alt="Rust Logo" width={50} height={50} />
         </h1>
         <p className="text-xl">
-          The non-crap repo for Rust Developers
+          the non-crap repo for Rust Developers.
         </p>
         <GitHubStars repo="FrancescoXX/rustcrab" />
+        <SubstackEmbed /> {/* Embedding Substack iframe */}
       </main>
       <Footer />
     </div>
