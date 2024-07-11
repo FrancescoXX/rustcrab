@@ -35,19 +35,29 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/FrancescoXX/rustcrab.git
    cd rustcrab
+   ```
 
 2. Install dependencies:
 
    ```bash
    npm install
-   # or
+   ```
+
+   or
+
+   ```bash
    yarn
+   ```
 
 ### Running the development server
 
 ```bash
 npm run dev
-# or
+```
+
+or
+
+```bash
 yarn dev
 ```
 
@@ -55,13 +65,15 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ### Building for production
 
-```bash
-
 To create an optimized production build, run:
 
 ```bash
 npm run build
-# or
+```
+
+or
+
+```bash
 yarn build
 ```
 
