@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { FaGithub, FaSun, FaMoon } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,11 +29,14 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-end p-4">
-      <a href="https://github.com/FrancescoXX/rustcrab" target="_blank" rel="noopener noreferrer" className="text-2xl mr-4">
+    <header className="flex justify-end items-center p-4 space-x-4">
+      <a href="https://daily.dev" target="_blank" rel="noopener noreferrer" className="text-2xl" title="Rustdevs on daily.dev">
+        <Image src="/rust_lgo_720.png" alt="daily.dev" width={24} height={24} />
+      </a>
+      <a href="https://github.com/FrancescoXX/rustcrab" target="_blank" rel="noopener noreferrer" className="text-2xl" title="GitHub repository">
         <FaGithub />
       </a>
-      <button onClick={toggleDarkMode} className="text-2xl">
+      <button onClick={toggleDarkMode} className="text-2xl" title="Dark/Light mode">
         {darkMode ? <FaSun /> : <FaMoon />}
       </button>
     </header>

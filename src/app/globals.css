@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --rust-orange: #dd6b20; /* Define the rust-orange color */
+}
+
 html {
   transition: background-color 0.3s, color 0.3s;
 }
@@ -10,11 +14,15 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-footer a {
-  color: orange;
+.border-rust-orange {
+  border-color: var(--rust-orange);
+}
+
+.text-rust-orange {
+  color: var(--rust-orange);
   transition: color 0.3s;
 }
 
-footer a:hover {
+.text-rust-orange:hover {
   color: darkorange;
 }
