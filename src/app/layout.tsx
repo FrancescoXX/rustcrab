@@ -1,18 +1,16 @@
-'use client';
-
-import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import * as gtag from '../lib/gtag';
-import Head from 'next/head';
-
+import { Inter, Roboto } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
 import Script from "next/script";
 
+const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
-  useEffect(() => {
-    gtag.pageview(pathname);
-  }, [pathname]);
-
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <head>
@@ -30,22 +28,14 @@ import Script from "next/script";
         </Script>
       </head>
       <Head>
-        {/* Global Site Tag (gtag.js) - Google Analytics */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-                page_path: window.location.pathname,
-              });
-            `,
-          }}
+        <title>Rustcrab - The Non-Crap Repo for Rust Developers</title>
+        <meta
+          name="description"
+          content="The best repository for Rust developers"
         />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
+      <body className={`${inter.className} ${roboto.className}`}>
         {children}
       </body>
     </html>
