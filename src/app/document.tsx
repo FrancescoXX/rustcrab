@@ -1,20 +1,9 @@
-'use client';
+import { Html, Head, Main, NextScript } from 'next/document';
 
-import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import * as gtag from '../lib/gtag';
-import './globals.css';
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    gtag.pageview(pathname);
-  }, [pathname]);
-
+export default function Document() {
   return (
-    <html lang="en">
-      <head>
+    <Html>
+      <Head>
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></script>
         <script
@@ -29,10 +18,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
-      </head>
+      </Head>
       <body>
-        {children}
+        <Main />
+        <NextScript />
       </body>
-    </html>
+    </Html>
   );
 }
