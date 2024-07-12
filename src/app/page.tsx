@@ -20,7 +20,7 @@ export default function Home() {
         <GitHubStars repo="FrancescoXX/rustcrab" />
         <br />
         <br />
-        <p className="text-xl">🚧 Work in progress</p>
+        <p className="text-xl">🚧 An Open source project to have everything you need to learn Rust 🚧</p>
         <br />
         <p className="text-xl">Subscribe to get the latest updates</p>
         <SubstackEmbed /> {/* Embedding Substack iframe */}
