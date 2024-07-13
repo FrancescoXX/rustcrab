@@ -1,6 +1,6 @@
 export default function SubstackEmbed() {
   return (
-    <div className="flex justify-center my-8">
+    <div className="flex justify-center my-8 max-sm:w-11/12">
       <iframe
         src="https://francescociulla.substack.com/embed"
         width="480"
