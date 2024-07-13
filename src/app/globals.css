@@ -37,6 +37,7 @@ body {
   border-top: 1px solid #ddd; /* Light mode border color */
   z-index: 1000;
   display: flex;
+  gap:0;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
@@ -75,3 +76,10 @@ body {
     background-color: #66d9ef; /* Dark mode button background color */
   }
 }
+
+/* Apply a smaller margin value on larger screens (above 1200px) */
+@media (min-width: 1200px) {
+  .cookie-consent {
+    justify-content: center; 
+   }
+ }
