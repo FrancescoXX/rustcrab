@@ -7,6 +7,7 @@ import DevToolsSection from '@/components/DevToolsSection';
 import CookieConsentBanner from '@/components/CookieConsent';
 import BooksSection from '@/components/BooksSection';
 import ProjectsSection from "@/components/ProjectsSection";
+import DSAToolSection from '@/components/DSAToolSection';
 
 
 export default function Home() {
@@ -43,6 +44,7 @@ export default function Home() {
         <SubstackEmbed /> {/* Embedding Substack iframe */}
         <DevToolsSection />
         <BooksSection/>
+        <DSAToolSection/>
         <ProjectsSection />
       </main>
       <CookieConsentBanner />
