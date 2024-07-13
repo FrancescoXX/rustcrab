@@ -12,6 +12,7 @@
     "lucide-react": "^0.408.0",
     "next": "14.2.4",
     "react": "^18",
+    "react-cookie-consent": "^9.0.0",
     "react-dom": "^18",
     "react-icons": "^5.2.1"
   },
