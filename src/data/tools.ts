@@ -1,4 +1,5 @@
 export interface Tool {
+  data_structure: ReactNode;
   name: string;
   description: string;
   icon: string;
