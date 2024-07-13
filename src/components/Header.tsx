@@ -7,6 +7,7 @@ import { Navbar } from "./Navbar";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (
@@ -20,6 +21,13 @@ export default function Header() {
       document.documentElement.classList.remove("dark");
       setDarkMode(false);
     }
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleDarkMode = () => {
