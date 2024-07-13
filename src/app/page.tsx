@@ -5,7 +5,9 @@ import GitHubStars from '../components/GitHubStars';
 import SubstackEmbed from '../components/SubstackEmbed';
 import DevToolsSection from '@/components/DevToolsSection';
 import CookieConsentBanner from '@/components/CookieConsent';
+import BooksSection from '@/components/BooksSection';
 import ProjectsSection from "@/components/ProjectsSection";
+
 
 export default function Home() {
   return (
@@ -40,6 +42,7 @@ export default function Home() {
         <p className="text-xl">Subscribe to get the latest updates</p>
         <SubstackEmbed /> {/* Embedding Substack iframe */}
         <DevToolsSection />
+        <BooksSection/>
         <ProjectsSection />
       </main>
       <CookieConsentBanner />
