@@ -32,6 +32,7 @@ export function Navbar() {
         <Hamburger toggled={isOpen} toggle={setIsOpen} />
       </div>
 
+      
       <div
         className={`${
           isOpen ? 'flex' : 'hidden'
