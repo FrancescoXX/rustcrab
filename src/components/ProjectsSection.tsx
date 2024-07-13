@@ -10,26 +10,6 @@ export default function ProjectsSection() {
         <h2 className="text-4xl font-bold mb-8 text-center text-current">
           Where is Rust Used
         </h2>
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.slice(0, 5).map((project, index) => (
-            <Link
-              target="_blank"
-              href={project.link}
-              key={index}
-              className="hover:shadow-xl hover:scale-105 shadow-lg"
-            >
-              <div className="flex flex-col items-center text-center">
-                <Image
-                  src={project.icon}
-                  alt={project.alt}
-                  width={75}
-                  height={75}
-                  className="rounded-md mb-4 w-20 h-20 p-2 object-contain"
-                />
-              </div>
-            </Link>
-          ))}
-        </div> */}
         <div className="flex flex-wrap justify-evenly gap-8">
           {projects.slice(0, 5).map((project, index) => (
             <Link
@@ -42,9 +22,18 @@ export default function ProjectsSection() {
                 <Image
                   src={project.icon}
                   alt={project.alt}
-                  width={75}
-                  height={75}
-                  className="rounded-md mb-4 w-20 h-20 p-2 object-contain"
+                  width={144}
+                  height={144}
+                  className="rounded-md mb-4 w-20 h-20 p-2 object-contain dark:hidden"
+                />
+                <Image
+                  src={
+                    project.darkModeIcon ? project.darkModeIcon : project.icon
+                  }
+                  alt={project.alt}
+                  width={144}
+                  height={144}
+                  className="rounded-md mb-4 w-20 h-20 p-2 object-contain hidden dark:block"
                 />
               </div>
             </Link>

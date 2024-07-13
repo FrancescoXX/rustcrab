@@ -1,13 +1,16 @@
 export interface Projects {
   alt: string;
   icon: string;
+  darkModeIcon?: string;
   link: string;
+  size?: number;
 }
 
 export const projects: Array<Projects> = [
   {
     alt: "AWS",
     icon: "/logos/aws.png",
+    darkModeIcon: "/logos/aws-dark.png",
     link: "https://aws.amazon.com/",
   },
   {
