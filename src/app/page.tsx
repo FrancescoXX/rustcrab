@@ -5,6 +5,11 @@ import GitHubStars from '../components/GitHubStars';
 import SubstackEmbed from '../components/SubstackEmbed';
 import DevToolsSection from '@/components/DevToolsSection';
 
+const REPO_URL = "https://github.com/FrancescoXX/rustcrab";
+const REPO_NAME = "Rustcrab";
+const IMAGE_SRC = "/rust_lgo_720.png";
+const ALT_TEXT = "Rust Logo";
+
 export default function Home() {
   return (
     <div className="bg-white dark:bg-black min-h-screen text-black dark:text-white flex flex-col">
@@ -13,10 +18,10 @@ export default function Home() {
       <main className="flex-grow flex flex-col items-center justify-center text-center space-y-4">
         <br />
         <h1 className="text-4xl font-bold flex items-center space-x-2">
-          <a href="https://github.com/FrancescoXX/rustcrab" target="_blank" rel="noopener noreferrer">
-            Rustcrab
+          <a href={REPO_URL} target="_blank" rel="noopener noreferrer" aria-label={REPO_NAME}>
+            {REPO_NAME}
           </a>
-          <Image src="/rust_lgo_720.png" alt="Rust Logo" width={50} height={50} />
+          <Image src={IMAGE_SRC} alt={ALT_TEXT} width={50} height={50} onError={(e) => e.target.style.display='none'} />
         </h1>
         <p className="text-xl">The non-crap resource for Rust Developers.</p>
         <GitHubStars repo="FrancescoXX/rustcrab" />
