@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 interface GitHubStarsProps {
   repo: string;
@@ -9,7 +11,7 @@ interface GitHubStarsProps {
 export default function GitHubStars({ repo }: GitHubStarsProps) {
   const [stars, setStars] = useState<number | null>(null);
 
-  useEffect(() => {
+
     async function fetchStars() {
       try {
         const response = await fetch(`https://api.github.com/repos/${repo}`);
@@ -20,6 +22,9 @@ export default function GitHubStars({ repo }: GitHubStarsProps) {
       }
     }
 
+  useEffect(() => {
+  
+
     fetchStars();
   }, [repo]);
 
@@ -29,14 +34,9 @@ export default function GitHubStars({ repo }: GitHubStarsProps) {
 
   return (
     <div className="text-center">
-      <a
-        href={`https://github.com/${repo}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-2xl"
-      >
+      <Link href={`https://github.com/${repo}`} target="_blank" rel="noopener noreferrer" className="text-2xl">
         ⭐ {stars} stars on GitHub
-      </a>
+      </Link>
     </div>
   );
 }

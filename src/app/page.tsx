@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import GitHubStars from "../components/GitHubStars";
 import SubstackEmbed from "../components/SubstackEmbed";
+import DevToolsSection from "@/components/DevToolsSection";
+
 
 export default function Home() {
   return (
@@ -35,6 +37,7 @@ export default function Home() {
         <br />
         <p className="text-xl">Subscribe to get the latest updates</p>
         <SubstackEmbed /> {/* Embedding Substack iframe */}
+        <DevToolsSection />
       </main>
       <Footer />
     </div>
