@@ -42,9 +42,9 @@ const Navbar = () => {
 	return (
 		<div className=' hidden sm:block '>
 			<ul className='flex space-x-4 capitalize '>
-				{menuItems.map((items) => {
+				{menuItems.map((items, index) => {
 					return (
-						<li className='cursor-pointer transition ease-in-out'>
+						<li className='cursor-pointer transition ease-in-out' key={index}>
 							<Link href={items.link} className='hover:text-orange-500'>
 								{items.items}
 							</Link>

@@ -5,26 +5,26 @@ import { IoMdClose } from 'react-icons/io';
 import { menuItems } from './Navbar';
 import Link from 'next/link';
 const MobileNav = () => {
-	const [isCLicked, setClick] = useState(false);
+	const [isClicked, setClick] = useState(false);
 	const toggleNavbar = (): void => {
-		setClick(!isCLicked);
+		setClick(!isClicked);
 	};
 	return (
 		<div className='sm:hidden' onClick={toggleNavbar}>
-			{isCLicked ? (
+			{isClicked ? (
 				<FiMenu className='text-2xl' />
 			) : (
 				<div className='absolute top-0 left-0 dark:text-white dark:bg-black bg-white text-black w-44 p-4 shadow-lg'>
 					<IoMdClose className='text-2xl' />
-					{menuItems.map((items) => (
-						<ul className='m-2 '>
-							<li>
+					<ul className='m-2 space-y-2 '>
+						{menuItems.map((items, index) => (
+							<li key={index}>
 								<Link className='capitalize ' href={items.link}>
 									{items.items}
 								</Link>
 							</li>
-						</ul>
-					))}
+						))}
+					</ul>
 				</div>
 			)}
 		</div>
