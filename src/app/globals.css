@@ -26,3 +26,52 @@ body {
 .text-rust-orange:hover {
   color: darkorange;
 }
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: #f9f9f9; /* Light mode background color */
+  border-top: 1px solid #ddd; /* Light mode border color */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #333; /* Light mode text color */
+}
+
+.cookie-consent p {
+  margin: 0;
+}
+
+.accept-button,
+.decline-button {
+  background-color: #4CAF50; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.accept-button:hover,
+.decline-button:hover {
+  background-color: #3e8e41; /* Button hover background color */
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .cookie-consent {
+    background-color: #333; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+  }
+
+  .accept-button,
+  .decline-button {
+    background-color: #66d9ef; /* Dark mode button background color */
+  }
+}

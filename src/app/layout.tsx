@@ -2,6 +2,8 @@ import { Inter, Roboto } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
 import Script from "next/script";
+import CookieConsentBanner from '../components/CookieConsentBanner';
+
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -37,6 +39,7 @@ export default function RootLayout({
       </Head>
       <body className={`${inter.className} ${roboto.className}`}>
         {children}
+        <CookieConsentBanner/>
       </body>
     </html>
   );
