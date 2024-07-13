@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -15,6 +16,13 @@ export default function Header() {
       document.documentElement.classList.remove('dark');
       setDarkMode(false);
     }
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleDarkMode = () => {
@@ -29,7 +37,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-end items-center p-4 space-x-4">
+    <header className={`flex justify-end items-center p-4 space-x-4 sticky top-0 border-b-4 border-rust-orange transition-all duration-300 ${isScrolled ? 'backdrop-blur-md bg-opacity-70 bg-transparent' : 'bg-white dark:bg-black'}`}>
       <a href="https://app.daily.dev/squads/rustdevs" target="_blank" rel="noopener noreferrer" className="text-2xl" title="Rustdevs on daily.dev">
         <Image src="/rust_lgo_720.png" alt="daily.dev" width={24} height={24} />
       </a>

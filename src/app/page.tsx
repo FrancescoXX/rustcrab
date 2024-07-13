@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <div className="bg-white dark:bg-black min-h-screen text-black dark:text-white flex flex-col">
       <Header />
-      <div className="border-t-4 border-rust-orange"></div> {/* Orange line */}
       <main className="flex-grow flex flex-col items-center justify-center text-center space-y-4">
         <br />
         <h1 className="text-4xl font-bold flex items-center space-x-2">
