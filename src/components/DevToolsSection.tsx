@@ -1,30 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-const tools = [
-  {
-    name: "Rspack",
-    description:
-      "A fast Rust-based web bundler that aims to be a drop-in replacement for webpack.",
-    icon: "/logos/rspack.svg",
-    link: "https://www.rspack.dev/",
-  },
-  {
-    name: "Zed IDE",
-    description:
-      "A high-performance, multiplayer code editor, built with Rust.",
-    icon: "/logos/zed.png",
-    link: "https://zed.dev/",
-  },
-  {
-    name: "Helix Editor",
-    description:
-      "A post-modern modal text editor. lightweight, and keyboard-centric. Built with Rust.",
-    icon: "/logos/helix.svg",
-    link: "https://helix-editor.com/",
-  },
-];
+import { tools } from "@/data/tools";
 
 export default function DevToolsSection() {
   return (
@@ -34,9 +11,9 @@ export default function DevToolsSection() {
           Rust Developer Tools
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {tools.map((tool, index) => (
+          {tools.slice(0, 3).map((tool, index) => (
             <Link
-              target={"_blank"}
+              target="_blank"
               href={tool.link}
               key={index}
               className="dark:bg-gray-900 bg-gray-100 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
@@ -59,6 +36,13 @@ export default function DevToolsSection() {
             </Link>
           ))}
         </div>
+      </div>
+      <div className="mt-12 text-center">
+        <Link href="/devtools">
+          <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+            See More Tools
+          </button>
+        </Link>
       </div>
     </section>
   );
