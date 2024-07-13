@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "js-cookie": "^3.0.5",
     "lucide-react": "^0.408.0",
     "next": "14.2.4",
     "react": "^18",
@@ -16,6 +17,7 @@
     "react-icons": "^5.2.1"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
