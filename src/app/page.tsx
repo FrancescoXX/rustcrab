@@ -5,7 +5,7 @@ import GitHubStars from '../components/GitHubStars';
 import SubstackEmbed from '../components/SubstackEmbed';
 import DevToolsSection from '@/components/DevToolsSection';
 import CookieConsentBanner from '@/components/CookieConsent';
-
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
