@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --rust-orange: #dd6b20; /* Define the rust-orange color */
+  --rust-orange: #dd6b20;
+  /* Define the rust-orange color */
+  --x: 0;
+  --y: 0;
 }
 
 html {
@@ -25,4 +28,85 @@ body {
 
 .text-rust-orange:hover {
   color: darkorange;
+}
+
+.form-glow input,
+.form-glow button {
+  animation: form-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes form-glow {
+  from {
+    box-shadow: 0 0 10px var(--rust-orange);
+  }
+
+  to {
+    box-shadow: 0 0 20px var(--rust-orange);
+  }
+}
+
+.group:hover input {
+  border-color: #ea580c !important;
+  /* Change border color to orange-600 on button hover */
+}
+
+.spinner {
+  border-top-color: transparent;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 4px solid;
+  border-color: white transparent white transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* for mouse tracking border in tool card */
+.toolsInnerCard {
+  position: relative !important;
+  transition: background 0.1s;
+}
+
+.toolsInnerCard:hover {
+  --active: 1;
+}
+
+.toolsInnerCard:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at var(--x) var(--y), #ffffff10, transparent 15vmin);
+  background-attachment: fixed;
+  opacity: var(--active, 0);
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+
+.toolsInnerCard:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at var(--x) var(--y), #ea580c, transparent 18vmin),
+    transparent;
+  background-attachment: fixed;
+  pointer-events: none;
+  border-radius: .5rem;
+  mask:
+    linear-gradient(#ea580c, #ea580c50) 50% 0 / 100% 4px no-repeat,
+    linear-gradient(#ea580c, #ea580c50) 50% 100% / 100% 4px no-repeat,
+    linear-gradient(#ea580c, #ea580c50) 0 50% / 4px 100% no-repeat,
+    linear-gradient(#ea580c, #ea580c50) 100% 50% / 4px 100% no-repeat;
 }
