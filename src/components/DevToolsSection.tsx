@@ -30,7 +30,7 @@ export default function DevToolsSection() {
               target="_blank"
               href={tool.link}
               key={index}
-              className="dark:bg-gray-900 group bg-gray-100 rounded-lg shadow-lg transition duration-300 hover:shadow-xl min-w-full toolsInnerCard"
+              className="dark:bg-gray-900 group bg-gray-200 rounded-lg shadow-lg transition duration-300 hover:shadow-xl min-w-full toolsInnerCard"
             >
               <div className="flex items-center gap-5 sm:gap-10 relative hover:scale-105 p-6 px-10 transition duration-300">
                 <div className="flex flex-col md:flex-row gap-5 items-start w-full">
