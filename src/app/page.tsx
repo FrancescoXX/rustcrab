@@ -1,31 +1,34 @@
 "use client";
 
-import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Image from 'next/image';
-import GitHubStars from '../components/GitHubStars';
-import SubstackEmbed from '../components/SubstackEmbed';
-import CookieConsentBanner from '../components/CookieConsent';
-import Books from '../components/BooksSection';
-import DevToolsSection from '../components/DevToolsSection';
-import ProjectsSection from '../components/ProjectsSection';
-import SubstackCustom from '../components/SubstackCustom';
-import DSAToolSection from '@/components/DSASection';
+import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Image from "next/image";
+import GitHubStars from "../components/GitHubStars";
+import SubstackEmbed from "../components/SubstackEmbed";
+import CookieConsentBanner from "../components/CookieConsent";
+import Books from "../components/BooksSection";
+import DevToolsSection from "../components/DevToolsSection";
+import ProjectsSection from "../components/ProjectsSection";
+import SubstackCustom from "../components/SubstackCustom";
+import DSAToolSection from "@/components/DSASection";
+import PeopleSection from "@/components/PeopleSection";
 
 export default function Home() {
-  const [currentSection, setCurrentSection] = useState('home');
+  const [currentSection, setCurrentSection] = useState("home");
 
   const renderSection = () => {
     switch (currentSection) {
-      case 'books':
+      case "books":
         return <Books />;
-      case 'dev tools':
+      case "dev tools":
         return <DevToolsSection />;
-      case 'projects':
+      case "projects":
         return <ProjectsSection />;
-      case 'dsas':
-        return <DSAToolSection/>;
+      case "dsas":
+        return <DSAToolSection />;
+      case "people":
+        return <PeopleSection />;
       default:
         return (
           <div className="flex flex-col items-center justify-center text-center space-y-6 p-4">
@@ -48,7 +51,8 @@ export default function Home() {
             </h1>
             <br />
             <p className="text-2xl md:text-3xl lg:text-4xl text-current">
-              An Open source project with everything you need to learn about Rust
+              An Open source project with everything you need to learn about
+              Rust
             </p>
             <br />
             <div className="w-full max-w-md">
