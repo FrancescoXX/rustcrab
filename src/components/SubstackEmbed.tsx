@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function SubstackEmbed() {
   return (
@@ -11,7 +11,12 @@ export default function SubstackEmbed() {
           src="https://francescociulla.substack.com/embed"
           width="100%"
           height="290"
-          style={{ border: '5px solid #ea580c', background: 'white', borderRadius: '15px', overflow: 'hidden' }}
+          style={{
+            border: "5px solid #ea580c",
+            background: "white",
+            borderRadius: "15px",
+            overflow: "hidden",
+          }}
           className="shadow-lg"
         ></iframe>
       </div>

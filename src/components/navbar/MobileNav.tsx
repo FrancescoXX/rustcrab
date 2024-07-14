@@ -1,6 +1,6 @@
-'use client';
-import React, { useState, useRef, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+"use client";
+import React, { useState, useRef, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 interface menuObject {
   items: string;
@@ -12,11 +12,11 @@ interface MobileNavProps {
 }
 
 export const menuItems: menuObject[] = [
-  { items: 'Home', link: 'home' },
-  { items: 'Books', link: 'books' },
-  { items: 'Projects', link: 'projects' },
-  { items: 'Dev Tools', link: 'dev tools' },
-  { items: 'DSA Examples', link: 'dsas'}
+  { items: "Home", link: "home" },
+  { items: "Books", link: "books" },
+  { items: "Projects", link: "projects" },
+  { items: "Dev Tools", link: "dev tools" },
+  { items: "DSA Examples", link: "dsas" },
 ];
 
 const MobileNav: React.FC<MobileNavProps> = ({ setSection }) => {
@@ -40,13 +40,13 @@ const MobileNav: React.FC<MobileNavProps> = ({ setSection }) => {
 
   useEffect(() => {
     if (menuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [menuOpen]);
 
