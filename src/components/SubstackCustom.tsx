@@ -1,31 +1,105 @@
-import { useEffect } from 'react';
-
-declare global {
-  interface Window {
-    CustomSubstackWidget: {
-      substackUrl: string;
-      placeholder: string;
-      buttonText: string;
-      theme: string;
-    };
-  }
-}
+import { useState, useEffect } from 'react';
+import { FaCheck } from 'react-icons/fa';
+import confetti from 'canvas-confetti';
 
 export default function SubstackCustom() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://substackapi.com/widget.js';
-    script.async = true;
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-    document.body.appendChild(script);
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setIsLoading(true);
 
-    window.CustomSubstackWidget = {
-      substackUrl: "francescociulla.substack.com",
-      placeholder: "example@gmail.com",
-      buttonText: "Subscribe",
-      theme: "orange",
-    };
-  }, []);
+    const response = await fetch('https://substackapi.com/api/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, domain: 'francescociulla.substack.com' }),
+    });
 
-  return <div id="custom-substack-embed" className="w-full max-w-md mx-auto my-8"></div>;
+    setIsLoading(false);
+
+    if (response.ok) {
+      setIsSubscribed(true);
+      setEmail('');
+      launchConfetti();
+    } else {
+      const data = await response.json();
+      alert(data.error || 'Subscription failed. Please try again.');
+    }
+  };
+
+  const launchConfetti = () => {
+    const end = Date.now() + 3 * 1000;
+
+    (function frame() {
+      confetti({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        shapes: ['circle'],
+        colors: ['#f97316', '#ea580c'],
+      });
+      confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        shapes: ['circle'],
+        colors: ['#f97316', '#ea580c'],
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  };
+
+  return (
+    <div className={`w-full max-w-md mx-auto my-8 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg ${isLoading ? 'glow' : ''}`}>
+      <form onSubmit={handleSubmit} className="flex flex-col items-center">
+        <label htmlFor="email" className="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Subscribe to get exclusive stuff
+        </label>
+        <div className="flex w-full group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="flex-1 px-4 py-2 border-4 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none rounded-l-md transition-colors duration-300"
+            style={{
+              borderColor: '#f97316', // Orange border
+              borderRight: 'none',
+            }}
+          />
+          <button
+            type="submit"
+            className={`px-4 py-2 text-white rounded-r-md transition duration-300 flex items-center justify-center cursor-pointer
+              ${isSubscribed ? 'bg-gradient-to-r from-orange-500 to-orange-700' : 'bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-yellow-600'}
+              ${isLoading ? 'glow' : ''} group-hover:border-red-500`}
+            disabled={isLoading || isSubscribed}
+            style={{
+              borderRadius: '0 0.375rem 0.375rem 0',
+              minWidth: '120px', // Ensures the button width does not change when showing the checkmark
+            }}
+          >
+            {isSubscribed ? (
+              <FaCheck />
+            ) : isLoading ? (
+              <div className="spinner border-t-transparent border-solid border-white border-2 w-5 h-5 rounded-full animate-spin"></div>
+            ) : (
+              'Subscribe'
+            )}
+          </button>
+        </div>
+      </form>
+    </div>
+  );
 }

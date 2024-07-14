@@ -1,8 +1,9 @@
-import { FaTwitter, FaLinkedin, FaYoutube, FaDiscord, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaYoutube, FaDiscord, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter, } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center space-y-4 p-4 border-t-2 bg-gradient-to-r from-orange-500 to-yellow-500 bg-white dark:bg-black">
+    <footer className="flex flex-col items-center justify-center space-y-4 p-4 border-t-4 border-orange-500 bg-white dark:bg-black">
       <div className="flex justify-center space-x-6">
         <a
           href="https://x.com/FrancescoCiull4"
@@ -10,7 +11,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="text-2xl text-black dark:text-white"
         >
-          <FaTwitter />
+          <FaXTwitter />
         </a>
         <a
           href="https://www.linkedin.com/in/francesco-ciulla-roma/"

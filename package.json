@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.3",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.408.0",
     "next": "14.2.4",
