@@ -51,17 +51,22 @@ export default function DevTools() {
               className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
-                <h3 className="text-2xl font-semibold mb-3 text-gray-800 dark:text-white">
+                <div className="relative w-[350px] overflow-hidden h-0 pb-[56.25%] rounded-lg">
+                  <iframe
+                    width="350"
+                    height="200"
+                    src={lesson.embed}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+                <h3 className="text-2xl mt-4 font-semibold mb-3 text-gray-800 dark:text-white">
                   {lesson.title}
                 </h3>
-                <div className="text-gray-600 dark:text-gray-400 mb-4">
-                  <p className="w-[300px] text-start mb-3">
-                    In this lesson, We will talk about:
-                  </p>
-                  {lesson.topics.map((topic, id) => (
-                    <p key={id}>- {topic}</p>
-                  ))}
-                </div>
+
                 <span className="text-red-500 hover:text-red-600 font-medium flex items-center gap-1">
                   Learn More <ArrowRight size={20} />
                 </span>
