@@ -9,7 +9,7 @@ export default function DevToolsSection() {
         <h2 className="text-4xl font-bold mb-8 text-center text-current">
           Rust Developer Tools
         </h2>
-        <div className="grid md:grid-cols-2 w-full gap-5">
+        <div className="grid md:grid-cols-3 w-full gap-5">
           {tools.slice(0, 3).map((tool, index) => (
             <Card item={tool} key={index} />
           ))}
