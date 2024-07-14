@@ -40,7 +40,7 @@ export default function BooksSection() {
       <div className="mt-12 text-center">
         <Link href="/books">
           <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
-            See More Tools
+            See More Books
           </button>
         </Link>
       </div>
