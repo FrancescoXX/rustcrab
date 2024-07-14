@@ -1,7 +1,10 @@
 import { FaLinkedin, FaYoutube, FaDiscord, FaInstagram } from "react-icons/fa";
 import { FaXTwitter, FaThreads } from "react-icons/fa6";
+import Link from "next/link"
 
 export default function Footer() {
+  const today = new Date()
+  const currentYear = today.getFullYear()
   return (
     <footer className="flex flex-col items-center justify-center space-y-4 p-4 border-t-2 bg-white dark:bg-black">
       <div className="flex justify-center space-x-6">
@@ -53,10 +56,20 @@ export default function Footer() {
         >
           <FaThreads />
         </a>
-      </div>
-      <p className="text-black dark:text-white text-xs">
-        © 2024 Rustcrab. All rights reserved.
+        <div className='text-white sm:flex sm:items-center sm:justify-center gap-3'>
+     <span className='sm:text-center gap-2 lg:flex lg:items-center lg:justify-center sm:block md:flex'>
+      <p className='gap-2'>
+        &copy; {currentYear}
       </p>
+      <Link href="https://app.daily.dev/squads/rustdevs" className='hover:underline'>
+        Rustcrab
+      </Link>
+      <p>
+        All Rights Reserved.
+      </p>
+     </span>
+     </div>
+      </div>
+     
     </footer>
-  );
-}
+  )}
