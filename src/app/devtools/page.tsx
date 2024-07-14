@@ -43,7 +43,7 @@ export default function DevTools() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 w-full gap-5">
+        <div className="grid md:grid-cols-3 w-full gap-5">
           {filteredTools.map((tool, index) => (
             <Card item={tool} key={index} />
           ))}

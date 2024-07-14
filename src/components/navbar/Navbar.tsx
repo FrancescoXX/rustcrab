@@ -13,6 +13,7 @@ interface NavbarProps {
 export const menuItems: menuObject[] = [
   { items: "Books", link: "books" },
   { items: "Projects", link: "projects" },
+  { items: "Lessons", link: "lessons" },
   { items: "Dev Tools", link: "dev tools" },
   { items: "DSA Example", link: "dsas" },
   { items: "People", link: "people" },

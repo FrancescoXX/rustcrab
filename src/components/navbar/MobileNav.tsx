@@ -15,6 +15,7 @@ export const menuItems: menuObject[] = [
   { items: "Home", link: "home" },
   { items: "Books", link: "books" },
   { items: "Projects", link: "projects" },
+  { items: "Lessons", link: "lessons" },
   { items: "Dev Tools", link: "dev tools" },
   { items: "DSA Examples", link: "dsas" },
 ];

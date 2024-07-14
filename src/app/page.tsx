@@ -13,6 +13,7 @@ import ProjectsSection from "../components/ProjectsSection";
 import SubstackCustom from "../components/SubstackCustom";
 import DSAToolSection from "@/components/DSASection";
 import PeopleSection from "@/components/PeopleSection";
+import LessonSection from "@/components/LessonSection";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState("home");
@@ -25,6 +26,8 @@ export default function Home() {
         return <DevToolsSection />;
       case "projects":
         return <ProjectsSection />;
+      case "lessons":
+        return <LessonSection />;
       case "dsas":
         return <DSAToolSection />;
       case "people":
