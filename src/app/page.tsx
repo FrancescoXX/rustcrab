@@ -11,6 +11,7 @@ import Books from '../components/BooksSection';
 import DevToolsSection from '../components/DevToolsSection';
 import ProjectsSection from '../components/ProjectsSection';
 import SubstackCustom from '../components/SubstackCustom';
+import DSAToolSection from '@/components/DSASection';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('home');
@@ -23,6 +24,8 @@ export default function Home() {
         return <DevToolsSection />;
       case 'projects':
         return <ProjectsSection />;
+      case 'dsas':
+        return <DSAToolSection/>;
       default:
         return (
           <div className="flex flex-col items-center justify-center text-center space-y-6 p-4">
