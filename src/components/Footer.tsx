@@ -1,5 +1,5 @@
 import { FaLinkedin, FaYoutube, FaDiscord, FaInstagram } from 'react-icons/fa';
-import { FaXTwitter, } from 'react-icons/fa6';
+import { FaXTwitter,FaThreads } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
@@ -44,6 +44,14 @@ export default function Footer() {
           className="text-2xl text-black dark:text-white"
         >
           <FaInstagram />
+        </a>
+        <a
+          href="https://www.threads.net/@francescociull4"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-2xl text-black dark:text-white"
+        >
+          <FaThreads/>
         </a>
       </div>
       <p className="text-black dark:text-white text-xs">© 2024 Rustcrab. All rights reserved.</p>
