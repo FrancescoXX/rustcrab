@@ -47,7 +47,7 @@ export default function Books() {
 
 
         <div className="grid md:grid-cols-2 w-full gap-5">
-          {filteredBooks.map((book, index) => <Card item={book} index={index} />)}
+          {filteredBooks.map((book, index) => <Card item={book} key={index} />)}
         </div>
 
         {filteredBooks.length === 0 && (

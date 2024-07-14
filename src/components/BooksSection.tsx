@@ -11,7 +11,7 @@ export default function BooksSection() {
           Books to Learn Rust
         </h2>
         <div className="grid md:grid-cols-2 w-full gap-5">
-          {books.slice(0, 3).map((book, index) => <Card item={book} index={index}  />)}
+          {books.slice(0, 3).map((book, index) => <Card item={book} key={index}  />)} 
         </div>
       </div>
       <div className="mt-12 text-center">
