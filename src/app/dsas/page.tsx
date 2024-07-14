@@ -110,16 +110,16 @@ const DSAPage: React.FC = () => {
             </pre>
 
             <button
-              onClick={handleCloseModal}
-              className="mt-4 ml-4 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-            >
-              Close
-            </button>
-            <button
               onClick={handleCopyCode}
               className="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
             >
               Copy Code
+            </button>
+            <button
+              onClick={handleCloseModal}
+              className="mt-4 ml-4 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+            >
+              Close
             </button>
             {copySuccess && (
               <p className="mt-2 text-sm text-green-500">{copySuccess}</p>
