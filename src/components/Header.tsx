@@ -1,4 +1,4 @@
-"use client"; // This directive marks the component as a Client Component
+'use client'; // This directive marks the component as a Client Component
 
 import { useState, useEffect } from "react";
 import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
@@ -6,8 +6,8 @@ import Image from "next/image";
 import { Navbar } from "./Navbar";
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+	const [darkMode, setDarkMode] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (
@@ -22,13 +22,13 @@ export default function Header() {
       setDarkMode(false);
     }
 
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 0);
+		};
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 
   const toggleDarkMode = () => {
     if (darkMode) {
