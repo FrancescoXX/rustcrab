@@ -1,5 +1,5 @@
-import { FaLinkedin, FaYoutube, FaDiscord, FaInstagram } from 'react-icons/fa';
-import { FaXTwitter,FaThreads } from 'react-icons/fa6';
+import { FaLinkedin, FaYoutube, FaDiscord, FaInstagram } from "react-icons/fa";
+import { FaXTwitter, FaThreads } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://x.com/FrancescoCiull4"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-black dark:text-white"
+          className="text-2xl text-black dark:text-white hover:scale-125 transition-all ease-in-out"
         >
           <FaXTwitter />
         </a>
@@ -17,44 +17,46 @@ export default function Footer() {
           href="https://www.linkedin.com/in/francesco-ciulla-roma/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-black dark:text-white"
+          className="text-2xl text-black dark:text-white hover:scale-125 transition-all ease-in-out"
         >
-          <FaLinkedin />
+          <FaLinkedin className="transition-all ease-in-out hover:fill-blue-500" />
         </a>
         <a
           href="https://www.youtube.com/@francescociulla"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-black dark:text-white"
+          className="text-2xl text-black dark:text-white hover:scale-125 transition-all ease-in-out"
         >
-          <FaYoutube />
+          <FaYoutube className="transition-all ease-in-out hover:fill-red-500" />
         </a>
         <a
           href="https://discord.gg/4c-784142072763383858"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-black dark:text-white"
+          className="text-2xl text-black dark:text-white hover:scale-125 transition-all ease-in-out"
         >
-          <FaDiscord />
+          <FaDiscord className="transition-all ease-in-out hover:fill-[#5871EA]" />
         </a>
         <a
           href="https://www.instagram.com/francescociull4/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-black dark:text-white"
+          className="text-2xl text-black dark:text-white hover:scale-125 transition-all ease-in-out"
         >
-          <FaInstagram />
+          <FaInstagram className="transition-all ease-in-out hover:fill-pink-500" />
         </a>
         <a
           href="https://www.threads.net/@francescociull4"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl text-black dark:text-white"
+          className="text-2xl text-black dark:text-white hover:scale-125 transition-all ease-in-out"
         >
-          <FaThreads/>
+          <FaThreads />
         </a>
       </div>
-      <p className="text-black dark:text-white text-xs">© 2024 Rustcrab. All rights reserved.</p>
+      <p className="text-black dark:text-white text-xs">
+        © 2024 Rustcrab. All rights reserved.
+      </p>
     </footer>
   );
 }
