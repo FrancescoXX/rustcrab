@@ -13,9 +13,14 @@ interface HeaderProps {
 export default function Header({ setSection }: HeaderProps) {
   const [darkMode, setDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [starsCount, setStarsCount] = useState<number | null>(null);
 
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
       document.documentElement.classList.add('dark');
       setDarkMode(true);
     } else {
@@ -29,6 +34,13 @@ export default function Header({ setSection }: HeaderProps) {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    fetch('https://api.github.com/repos/FrancescoXX/rustcrab')
+      .then((response) => response.json())
+      .then((data) => setStarsCount(data.stargazers_count))
+      .catch((error) => console.error('Error fetching GitHub stars:', error));
   }, []);
 
   const toggleDarkMode = () => {
@@ -45,7 +57,9 @@ export default function Header({ setSection }: HeaderProps) {
   return (
     <header
       className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-4 border-[#FF8C00] transition-all duration-300 ${
-        isScrolled ? 'backdrop-blur-md bg-opacity-70 bg-transparent' : 'bg-white dark:bg-black'
+        isScrolled
+          ? 'backdrop-blur-md bg-opacity-70 bg-transparent'
+          : 'bg-white dark:bg-black'
       }`}
     >
       <div className="flex items-center space-x-4">
@@ -63,11 +77,26 @@ export default function Header({ setSection }: HeaderProps) {
         </div>
       </div>
       <div className="flex items-center space-x-4">
-        <a href="https://app.daily.dev/squads/rustdevs" target="_blank" rel="noopener noreferrer" className="text-2xl" title="Rustdevs on daily.dev">
+        <a
+          href="https://app.daily.dev/squads/rustdevs"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-2xl"
+          title="Rustdevs on daily.dev"
+        >
           <Image src="/icons/daily.dev-icon.png" alt="daily.dev" width={24} height={24} />
         </a>
-        <a href="https://github.com/FrancescoXX/rustcrab" target="_blank" rel="noopener noreferrer" className="text-2xl" title="GitHub repository">
+        <a
+          href="https://github.com/FrancescoXX/rustcrab"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2 text-2xl"
+          title="GitHub repository"
+        >
           <FaGithub />
+          {starsCount !== null && (
+            <span className="text-xl">{starsCount} ★</span>
+          )}
         </a>
         <button onClick={toggleDarkMode} className="text-2xl" title="Dark/Light mode">
           {darkMode ? <FaSun /> : <FaMoon />}
