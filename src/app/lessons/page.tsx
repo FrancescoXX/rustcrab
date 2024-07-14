@@ -13,7 +13,7 @@ export default function Lessons() {
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
     const filtered = lessons.filter((lessons) =>
-      lessons.title.toLowerCase().includes(term)
+      lessons.title.toLowerCase().includes(term),
     );
     setFilteredLessons(filtered);
   };

@@ -3,7 +3,6 @@ import { tools } from "@/data/tools";
 import Card from "./Card";
 
 export default function DevToolsSection() {
-
   return (
     <section className="py-16 pt-10  rounded-md my-4">
       <div className="mx-auto px-4 container">
@@ -11,7 +10,9 @@ export default function DevToolsSection() {
           Rust Developer Tools
         </h2>
         <div className="grid md:grid-cols-2 w-full gap-5">
-          {tools.slice(0, 3).map((tool, index) => <Card item={tool} key={index} />)}
+          {tools.slice(0, 3).map((tool, index) => (
+            <Card item={tool} key={index} />
+          ))}
         </div>
       </div>
       <div className="mt-12 text-center">

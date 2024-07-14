@@ -1,27 +1,29 @@
 export interface DSA {
-    data_structure: string;
-    description: string;
-    snippet: string;
-    link: string;
-  }
-  
-  export const dsas: Array<DSA> = [
-    {
-      data_structure: "Vector",
-      description: "A resizable array, implemented as a contiguous growable array type.",
-      snippet: `
+  data_structure: string;
+  description: string;
+  snippet: string;
+  link: string;
+}
+
+export const dsas: Array<DSA> = [
+  {
+    data_structure: "Vector",
+    description:
+      "A resizable array, implemented as a contiguous growable array type.",
+    snippet: `
   let mut vec = Vec::new();
   vec.push(1);
   vec.push(2);
   vec.push(3);
   println!("{:?}", vec); // Output: [1, 2, 3]
       `,
-      link: "https://doc.rust-lang.org/std/vec/struct.Vec.html"
-    },
-    {
-      data_structure: "HashMap",
-      description: "A hash map implemented with quadratic probing and SIMD lookup.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/vec/struct.Vec.html",
+  },
+  {
+    data_structure: "HashMap",
+    description:
+      "A hash map implemented with quadratic probing and SIMD lookup.",
+    snippet: `
   use std::collections::HashMap;
   
   let mut map = HashMap::new();
@@ -29,12 +31,12 @@ export interface DSA {
   map.insert("key2", "value2");
   println!("{:?}", map); // Output: {"key1": "value1", "key2": "value2"}
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.HashMap.html"
-    },
-    {
-      data_structure: "LinkedList",
-      description: "A doubly-linked list.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.HashMap.html",
+  },
+  {
+    data_structure: "LinkedList",
+    description: "A doubly-linked list.",
+    snippet: `
   use std::collections::LinkedList;
   
   let mut list = LinkedList::new();
@@ -43,12 +45,12 @@ export interface DSA {
   list.push_back(3);
   println!("{:?}", list); // Output: [1, 2, 3]
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.LinkedList.html"
-    },
-    {
-      data_structure: "BinaryHeap",
-      description: "A priority queue implemented with a binary heap.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.LinkedList.html",
+  },
+  {
+    data_structure: "BinaryHeap",
+    description: "A priority queue implemented with a binary heap.",
+    snippet: `
   use std::collections::BinaryHeap;
   
   let mut heap = BinaryHeap::new();
@@ -57,12 +59,12 @@ export interface DSA {
   heap.push(2);
   println!("{:?}", heap.peek()); // Output: Some(5)
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.BinaryHeap.html"
-    },
-    {
-      data_structure: "HashSet",
-      description: "A hash set implemented as a HashMap where the value is ()",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.BinaryHeap.html",
+  },
+  {
+    data_structure: "HashSet",
+    description: "A hash set implemented as a HashMap where the value is ()",
+    snippet: `
   use std::collections::HashSet;
   
   let mut set = HashSet::new();
@@ -70,12 +72,12 @@ export interface DSA {
   set.insert("value2");
   println!("{:?}", set); // Output: {"value1", "value2"}
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.HashSet.html"
-    },
-    {
-      data_structure: "BTreeMap",
-      description: "A map based on a B-Tree.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.HashSet.html",
+  },
+  {
+    data_structure: "BTreeMap",
+    description: "A map based on a B-Tree.",
+    snippet: `
   use std::collections::BTreeMap;
   
   let mut map = BTreeMap::new();
@@ -83,12 +85,12 @@ export interface DSA {
   map.insert("key2", "value2");
   println!("{:?}", map); // Output: {"key1": "value1", "key2": "value2"}
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.BTreeMap.html"
-    },
-    {
-      data_structure: "BTreeSet",
-      description: "A set based on a B-Tree.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.BTreeMap.html",
+  },
+  {
+    data_structure: "BTreeSet",
+    description: "A set based on a B-Tree.",
+    snippet: `
   use std::collections::BTreeSet;
   
   let mut set = BTreeSet::new();
@@ -96,12 +98,13 @@ export interface DSA {
   set.insert("value2");
   println!("{:?}", set); // Output: {"value1", "value2"}
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.BTreeSet.html"
-    },
-    {
-      data_structure: "VecDeque",
-      description: "A double-ended queue implemented with a growable ring buffer.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.BTreeSet.html",
+  },
+  {
+    data_structure: "VecDeque",
+    description:
+      "A double-ended queue implemented with a growable ring buffer.",
+    snippet: `
   use std::collections::VecDeque;
   
   let mut deque = VecDeque::new();
@@ -110,12 +113,12 @@ export interface DSA {
   deque.push_front(0);
   println!("{:?}", deque); // Output: [0, 1, 2]
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.VecDeque.html"
-    },
-    {
-      data_structure: "Binary Search Tree",
-      description: "A basic binary search tree implementation.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.VecDeque.html",
+  },
+  {
+    data_structure: "Binary Search Tree",
+    description: "A basic binary search tree implementation.",
+    snippet: `
   struct TreeNode<T> {
       value: T,
       left: Option<Box<TreeNode<T>>>,
@@ -152,12 +155,13 @@ export interface DSA {
   root.insert(5);
   root.insert(15);
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    },
-    {
-      data_structure: "Trie",
-      description: "A prefix tree for efficient storage and retrieval of strings.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+  {
+    data_structure: "Trie",
+    description:
+      "A prefix tree for efficient storage and retrieval of strings.",
+    snippet: `
   struct TrieNode {
       children: std::collections::HashMap<char, TrieNode>,
       end_of_word: bool,
@@ -196,12 +200,12 @@ export interface DSA {
   trie.insert("hello");
   trie.insert("world");
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    },
-    {
-      data_structure: "Graph (Adjacency List)",
-      description: "A simple graph representation using an adjacency list.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+  {
+    data_structure: "Graph (Adjacency List)",
+    description: "A simple graph representation using an adjacency list.",
+    snippet: `
   use std::collections::HashMap;
   
   struct Graph {
@@ -225,12 +229,12 @@ export interface DSA {
   graph.add_edge(1, 2);
   graph.add_edge(2, 3);
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    },
-    {
-      data_structure: "Stack",
-      description: "A simple stack implemented with a Vec.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+  {
+    data_structure: "Stack",
+    description: "A simple stack implemented with a Vec.",
+    snippet: `
   struct Stack<T> {
       elements: Vec<T>,
   }
@@ -254,12 +258,12 @@ export interface DSA {
   stack.push(2);
   println!("{:?}", stack.pop()); // Output: Some(2)
       `,
-      link: "https://doc.rust-lang.org/std/vec/struct.Vec.html"
-    },
-    {
-      data_structure: "Queue",
-      description: "A simple queue implemented with a VecDeque.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/vec/struct.Vec.html",
+  },
+  {
+    data_structure: "Queue",
+    description: "A simple queue implemented with a VecDeque.",
+    snippet: `
   use std::collections::VecDeque;
   
   struct Queue<T> {
@@ -285,12 +289,12 @@ export interface DSA {
   queue.enqueue(2);
   println!("{:?}", queue.dequeue()); // Output: Some(1)
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.VecDeque.html"
-    },
-    {
-      data_structure: "Deque",
-      description: "A double-ended queue implemented with a VecDeque.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.VecDeque.html",
+  },
+  {
+    data_structure: "Deque",
+    description: "A double-ended queue implemented with a VecDeque.",
+    snippet: `
   use std::collections::VecDeque;
   
   struct Deque<T> {
@@ -324,12 +328,12 @@ export interface DSA {
   deque.push_front(0);
   println!("{:?}", deque.pop_back()); // Output: Some(1)
       `,
-      link: "https://doc.rust-lang.org/std/collections/struct.VecDeque.html"
-    },
-    {
-      data_structure: "Circular Buffer",
-      description: "A ring buffer implemented with a fixed-size array.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/struct.VecDeque.html",
+  },
+  {
+    data_structure: "Circular Buffer",
+    description: "A ring buffer implemented with a fixed-size array.",
+    snippet: `
   struct CircularBuffer<T> {
       buffer: Vec<T>,
       capacity: usize,
@@ -377,12 +381,13 @@ export interface DSA {
   buffer.push(4);
   println!("{:?}", buffer.pop()); // Output: Some(2)
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    },
-    {
-      data_structure: "Bloom Filter",
-      description: "A probabilistic data structure to test whether an element is a member of a set.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+  {
+    data_structure: "Bloom Filter",
+    description:
+      "A probabilistic data structure to test whether an element is a member of a set.",
+    snippet: `
   use std::collections::hash_map::DefaultHasher;
   use std::hash::{Hash, Hasher};
   
@@ -427,12 +432,12 @@ export interface DSA {
   filter.insert(&"hello");
   println!("{}", filter.contains(&"hello")); // Output: true
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    },
-    {
-      data_structure: "Segment Tree",
-      description: "A tree data structure for storing intervals, or segments.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+  {
+    data_structure: "Segment Tree",
+    description: "A tree data structure for storing intervals, or segments.",
+    snippet: `
   struct SegmentTree {
       data: Vec<i32>,
       size: usize,
@@ -488,12 +493,13 @@ export interface DSA {
   seg_tree.build(&[1, 2, 3, 4, 5, 6, 7, 8]);
   println!("{}", seg_tree.query(0, 3)); // Output: 10
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    },
-    {
-      data_structure: "Fenwick Tree",
-      description: "A tree data structure that provides efficient methods for calculation and manipulation of prefix sums.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+  {
+    data_structure: "Fenwick Tree",
+    description:
+      "A tree data structure that provides efficient methods for calculation and manipulation of prefix sums.",
+    snippet: `
   struct FenwickTree {
       data: Vec<i32>,
   }
@@ -530,12 +536,13 @@ export interface DSA {
   fenwick_tree.update(2, 3);
   println!("{}", fenwick_tree.query(2)); // Output: 6
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    },
-    {
-      data_structure: "LRU Cache",
-      description: "A cache that stores a fixed number of items and discards the least recently used items first.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+  {
+    data_structure: "LRU Cache",
+    description:
+      "A cache that stores a fixed number of items and discards the least recently used items first.",
+    snippet: `
   use std::collections::HashMap;
   
   struct LRUCache {
@@ -580,12 +587,12 @@ export interface DSA {
   cache.put(3, 3);
   println!("{:?}", cache.get(2)); // Output: None
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    },
-    {
-      data_structure: "Red-Black Tree",
-      description: "A self-balancing binary search tree.",
-      snippet: `
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+  {
+    data_structure: "Red-Black Tree",
+    description: "A self-balancing binary search tree.",
+    snippet: `
   struct Node {
       value: i32,
       color: bool,
@@ -621,7 +628,6 @@ export interface DSA {
   let mut rbt = RedBlackTree::new();
   rbt.insert(1);
       `,
-      link: "https://doc.rust-lang.org/std/collections/index.html"
-    }
-  ];
-  
+    link: "https://doc.rust-lang.org/std/collections/index.html",
+  },
+];

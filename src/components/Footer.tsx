@@ -1,5 +1,5 @@
-import { FaLinkedin, FaYoutube, FaDiscord, FaInstagram } from 'react-icons/fa';
-import { FaXTwitter,FaThreads } from 'react-icons/fa6';
+import { FaLinkedin, FaYoutube, FaDiscord, FaInstagram } from "react-icons/fa";
+import { FaXTwitter, FaThreads } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -51,10 +51,12 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="text-2xl text-black dark:text-white hover:text-black hover:scale-125 transform transition duration-400"
         >
-          <FaThreads/>
+          <FaThreads />
         </a>
       </div>
-      <p className="text-black dark:text-white text-xs">© 2024 Rustcrab. All rights reserved.</p>
+      <p className="text-black dark:text-white text-xs">
+        © 2024 Rustcrab. All rights reserved.
+      </p>
     </footer>
   );
 }
