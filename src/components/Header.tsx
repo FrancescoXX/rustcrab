@@ -1,5 +1,4 @@
 'use client'; // This directive marks the component as a Client Component
-
 import { useState, useEffect } from 'react';
 import { FaGithub, FaSun, FaMoon } from 'react-icons/fa';
 import Image from 'next/image';
@@ -16,11 +15,15 @@ export default function Header({ setSection }: HeaderProps) {
   const [starsCount, setStarsCount] = useState<number | null>(null);
 
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
       setDarkMode(true);
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
       setDarkMode(false);
     }
 
@@ -41,11 +44,11 @@ export default function Header({ setSection }: HeaderProps) {
 
   const toggleDarkMode = () => {
     if (darkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
     } else {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
     }
     setDarkMode(!darkMode);
   };

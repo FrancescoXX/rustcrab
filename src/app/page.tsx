@@ -14,6 +14,7 @@ import SubstackCustom from "../components/SubstackCustom";
 import DSAToolSection from "@/components/DSASection";
 import PeopleSection from "@/components/PeopleSection";
 
+
 export default function Home() {
   const [currentSection, setCurrentSection] = useState("home");
 
