@@ -8,7 +8,7 @@ export interface People {
   
   export const people: Array<People> = [
     {
-      name: "Francesco Ciulla",
+      name: "aFrancesco Ciulla",
       role: 'Founder',
       description: 'A passionate Software Engineer from Italy - Currently focused on Rust and Docker content on YouTube',
       profileIcon: "https://github.com/FrancescoXX.png",
