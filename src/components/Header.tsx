@@ -52,7 +52,7 @@ export default function Header({ setSection }: HeaderProps) {
 
   return (
     <header
-      className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-2 bg-gradient-to-r from-orange-500 to-yellow-500 transition-all duration-300 ${
+      className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-2 0 ${
         isScrolled ? 'backdrop-blur-md bg-opacity-70 bg-transparent' : 'bg-white dark:bg-black'
       }`}
     >
