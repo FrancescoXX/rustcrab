@@ -24,7 +24,7 @@ export default function Home() {
         return <ProjectsSection />;
       default:
         return (
-          <div className="flex flex-col items-center justify-center text-center space-y-4">
+          <div className="flex flex-col items-center justify-center text-center space-y-4 p-4">
             <br />
             <h1 className="text-4xl font-bold flex items-center space-x-2">
               <a
@@ -41,16 +41,18 @@ export default function Home() {
                 height={50}
               />
             </h1>
-            {/* <p className="text-xl">The non-crap resource for Rust Developers.</p> */}
-            
-            <p className="text-l">
-              An Open Source project with everything you need to learn about Rust.
-            </p>
-            <br />
+            <p className="text-xl">The non-crap resource for Rust Developers.</p>
             <GitHubStars repo="FrancescoXX/rustcrab" />
             <br />
-            <p className="text-xl">Subscribe to get the latest updates</p>
-            <SubstackEmbed />
+            <br />
+            <p className="text-xl md:text-2xl lg:text-3xl">
+              🦀 An Open source project with everything you need to learn about Rust 🦀
+            </p>
+            <br />
+            <p className="text-lg md:text-xl">Subscribe to get the latest updates</p>
+            <div className="w-full max-w-md">
+              <SubstackEmbed />
+            </div>
           </div>
         );
     }

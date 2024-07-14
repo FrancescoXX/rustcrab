@@ -1,18 +1,11 @@
 export default function SubstackEmbed() {
   return (
-    <div className="flex justify-center my-8 max-sm:w-11/12">
+    <div className="flex justify-center my-8">
       <iframe
         src="https://francescociulla.substack.com/embed"
-        width="480"
+        width="100%"
         height="150"
-        style={{
-          border: '2px solid #dd6b20', /* Rust orange border */
-          background: 'white',
-          borderRadius: '12px', /* Rounded corners */
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' /* Shadow effect */
-        }}
-        frameBorder="0"
-        scrolling="no"
+        style={{ border: '2px solid #dd6b20', background: 'white', borderRadius: '8px' }}
       ></iframe>
     </div>
   );
