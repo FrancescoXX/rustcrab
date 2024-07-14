@@ -1,7 +1,7 @@
 # Rustcrab
 ![rust_background_720](https://github.com/FrancescoXX/rustcrab/assets/18360871/d4a783ef-e4a4-4192-a7a0-fc05df133425)
 
-Rustcrab is a non-crap repository for Rust developers, providing a variety of resources, tools, and guides to help you enhance your Rust programming skills.
+An Open Source project with everything you need to learn about Rust.
 
 ## Project Overview
 
@@ -83,8 +83,31 @@ This will generate a out directory containing the optimized build.
 
 You can deploy this Next.js application to various platforms such as Vercel, Netlify, or any other hosting provider supporting static site hosting.
 
+
 ### Contributing
+Contributions are welcome! Please follow these guidelines to ensure a smooth and efficient process:
 
-Contributions are welcome! 
+1. **Finding and Creating Issues:**
+   - Browse the existing [Issues](https://github.com/FrancescoXX/rustcrab/issues) to see if there is something you would like to work on.
+   - If you find an issue that is not already assigned, you can assign it to yourself.
+   - If you don't find an issue that matches your interests, feel free to create a new issue detailing the problem or improvement.
 
-Feel free to open an issue or submit a pull request.
+2. **Assigning Issues:**
+   - Before starting work on an issue, check if it is already assigned to someone else.
+   - Do not work on issues that are already assigned to another contributor. Your pull request (PR) will not be accepted if the issue is already assigned.
+   - Assign the issue to yourself to indicate that you are working on it.
+
+3. **Submitting Pull Requests:**
+   - Ensure that your PR is linked to an assigned issue. PRs without an associated and assigned issue will not be accepted.
+   - Follow the project's coding standards and guidelines.
+   - Include a clear and concise description of the changes you have made in your PR.
+
+4. **Code Review and Feedback:**
+   - Be open to feedback and be prepared to make changes to your PR based on the review comments.
+   - Engage in discussions on the PR to clarify any questions or concerns.
+
+5. **Testing and Documentation:**
+   - Ensure that your changes are well-tested and do not break existing functionality.
+   - Update the documentation if your changes affect any part of it.
+
+By following these guidelines, you help maintain a collaborative and efficient workflow. Thank you for contributing!
