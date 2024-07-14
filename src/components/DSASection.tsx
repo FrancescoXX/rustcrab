@@ -6,6 +6,7 @@ import Link from "next/link";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { FaCopy } from 'react-icons/fa';
+import { IoCloseSharp } from 'react-icons/io5';
 const DSAToolSection: React.FC = () => {
 	const [selectedTool, setSelectedTool] = useState<DSA | null>(null);
 	const [copySuccess, setCopySuccess] = useState('');
@@ -66,11 +67,16 @@ const DSAToolSection: React.FC = () => {
 				<div className='fixed inset-0 flex items-center justify-center z-50 p-4 sm:p-8'>
 					<div className='fixed inset-0 bg-black opacity-50' onClick={handleCloseModal}></div>
 					<div className='bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg z-50 max-w-full sm:max-w-3xl w-full'>
-						<div className='flex justify-between items-center mb-4 ml-3 mr-5'>
+						<div className='flex justify-between items-center mb-4 ml-3 mr-1'>
 							<h3 className='text-2xl font-semibold  text-current'>{selectedTool.data_structure}</h3>
-							<button onClick={handleCopyCode} className='flex items-center justify-center'>
-								<FaCopy className='text-slate-800  dark:text-slate-300 text-2xl' />
-							</button>
+							<div className='flex space-x-4'>
+								<button onClick={handleCopyCode} className='flex items-center justify-center'>
+									<FaCopy className='text-slate-800  dark:text-slate-300 text-2xl' />
+								</button>
+								<button onClick={handleCloseModal} className=''>
+									<IoCloseSharp className='text-3xl text-red-500' />
+								</button>
+							</div>
 						</div>
 						<pre className='bg-gray-100 dark:bg-slate-900  rounded-md overflow-auto max-h-96'>
 							<code className='text-left '>
@@ -80,12 +86,6 @@ const DSAToolSection: React.FC = () => {
 							</code>
 						</pre>
 						{copySuccess && <p className='mt-2 text-sm text-green-500'>{copySuccess}</p>}
-						<button
-							onClick={handleCloseModal}
-							className='mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50'
-						>
-							Close
-						</button>
 					</div>
 				</div>
 			)}
