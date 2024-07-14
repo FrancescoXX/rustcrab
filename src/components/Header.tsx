@@ -16,11 +16,7 @@ export default function Header({ setSection }: HeaderProps) {
   const [starsCount, setStarsCount] = useState<number | null>(null);
 
   useEffect(() => {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
       setDarkMode(true);
     } else {
@@ -56,10 +52,8 @@ export default function Header({ setSection }: HeaderProps) {
 
   return (
     <header
-      className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-4 border-[#FF8C00] transition-all duration-300 ${
-        isScrolled
-          ? 'backdrop-blur-md bg-opacity-70 bg-transparent'
-          : 'bg-white dark:bg-black'
+      className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-2 bg-gradient-to-r from-orange-500 to-yellow-500 transition-all duration-300 ${
+        isScrolled ? 'backdrop-blur-md bg-opacity-70 bg-transparent' : 'bg-white dark:bg-black'
       }`}
     >
       <div className="flex items-center space-x-4">
