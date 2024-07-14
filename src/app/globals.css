@@ -27,20 +27,17 @@ body {
   color: darkorange;
 }
 
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 5px #f97316;
-  }
-  50% {
-    box-shadow: 0 0 20px #f97316;
-  }
-  100% {
-    box-shadow: 0 0 5px #f97316;
-  }
+.form-glow input, .form-glow button {
+  animation: form-glow 1.5s ease-in-out infinite alternate;
 }
 
-.glow {
-  animation: glow 1.5s infinite;
+@keyframes form-glow {
+  from {
+    box-shadow: 0 0 10px var(--rust-orange);
+  }
+  to {
+    box-shadow: 0 0 20px var(--rust-orange);
+  }
 }
 
 .group:hover input {

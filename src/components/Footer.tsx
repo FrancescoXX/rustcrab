@@ -46,7 +46,7 @@ export default function Footer() {
           <FaInstagram />
         </a>
       </div>
-      <p className="text-black dark:text-white">© 2024 Rustcrab. All rights reserved.</p>
+      <p className="text-black dark:text-white text-xs">© 2024 Rustcrab. All rights reserved.</p>
     </footer>
   );
 }

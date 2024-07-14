@@ -26,25 +26,26 @@ export default function Home() {
         return (
           <div className="flex flex-col items-center justify-center text-center space-y-6 p-4">
             <br />
-            <h1 className="text-5xl font-bold flex items-center space-x-2">
-              <a
-                href="https://github.com/FrancescoXX/rustcrab"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500"
-              >
-                Rustcrab
-              </a>
+            <div className="flex flex-col items-center space-y-2">
               <Image
                 src="/rust_lgo_720.png"
                 alt="Rust Logo"
-                width={50}
-                height={50}
+                width={100}
+                height={100}
               />
-            </h1>
+              <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">
+                <a
+                  href="https://github.com/FrancescoXX/rustcrab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rustcrab
+                </a>
+              </h1>
+            </div>
             <br />
-            <p className="text-l md:text-3xl lg:text-4xl text-current">
-              The Open Source project with everything you need to learn about Rust
+            <p className="text-2xl md:text-3xl lg:text-4xl text-current">
+              An Open source project with everything you need to learn about Rust
             </p>
             <br />
             <div className="w-full max-w-md">
