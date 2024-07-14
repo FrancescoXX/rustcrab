@@ -3,7 +3,7 @@ import { FaXTwitter, } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center space-y-4 p-4 border-t-4 border-orange-500 bg-white dark:bg-black">
+    <footer className="flex flex-col items-center justify-center space-y-4 p-4 border-t-2 bg-white dark:bg-black">
       <div className="flex justify-center space-x-6">
         <a
           href="https://x.com/FrancescoCiull4"
