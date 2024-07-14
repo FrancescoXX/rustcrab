@@ -44,7 +44,7 @@ export default function Header({ setSection }: HeaderProps) {
 
   return (
     <header
-      className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-4 border-rust-orange transition-all duration-300 ${
+      className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-4 border-[#FF8C00] transition-all duration-300 ${
         isScrolled ? 'backdrop-blur-md bg-opacity-70 bg-transparent' : 'bg-white dark:bg-black'
       }`}
     >

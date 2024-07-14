@@ -41,7 +41,7 @@ export default function Home() {
                 height={50}
               />
             </h1>
-            <p className="text-xl">The non-crap resource for Rust Developers.</p>
+            {/* <p className="text-xl">The non-crap resource for Rust Developers.</p> */}
             <GitHubStars repo="FrancescoXX/rustcrab" />
             <br />
             <br />

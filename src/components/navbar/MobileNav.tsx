@@ -31,12 +31,12 @@ const MobileNav: React.FC<MobileNavProps> = ({ setSection }) => {
   };
 
   return (
-    <div className="relative flex items-center">
+    <div className="relative">
       <button onClick={handleMenuToggle} className="text-2xl">
         {menuOpen ? <FaTimes /> : <FaBars />}
       </button>
       {menuOpen && (
-        <ul className="absolute left-0 mt-2 py-2 w-48 bg-white dark:bg-black border rounded-lg shadow-lg z-50">
+        <ul className="absolute left-0 top-12 py-2 w-48 bg-white dark:bg-black border rounded-lg shadow-lg z-50">
           {menuItems.map((item, index) => (
             <li
               key={index}

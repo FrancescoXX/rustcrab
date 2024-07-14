@@ -8,7 +8,7 @@ export default function ProjectsSection() {
     <section className="py-16 w-full rounded-md my-4">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-center text-current">
-          Where is Rust Used
+          Rust Projects
         </h2>
         <div className="flex flex-wrap justify-evenly gap-8">
           {projects.slice(0, 5).map((project, index) => (
@@ -19,6 +19,9 @@ export default function ProjectsSection() {
               className="hover:shadow-xl hover:scale-105 w-full sm:w-1/2 md:w-1/4"
             >
               <div className="flex flex-col items-center text-center">
+                {/* add name and descripton */}
+                <h3 className="text-2xl font-bold mb-4">{project.name}</h3>
+                <p className="text-lg">{project.description}</p>
                 <Image
                   src={project.icon}
                   alt={project.alt}
