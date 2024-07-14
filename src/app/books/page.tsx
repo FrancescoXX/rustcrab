@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Search } from "lucide-react";
 import { books } from "@/data/books";
+import Card from "@/components/Card";
 
 export default function Books() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -22,7 +23,7 @@ export default function Books() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100 dark:bg-black">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
           Books to Learn Rust 
@@ -44,35 +45,9 @@ export default function Books() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredBooks.map((book, index) => (
-            <Link
-              href={book.link}
-              key={index}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
-            >
-              <div className="flex flex-col items-center text-center">
-                <Image
-                  src={book.cover}
-                  alt={book.title}
-                  width={75}
-                  height={75}
-                  className="rounded-md mb-4 w-20 h-20 p-2 object-contain bg-gray-200 dark:bg-gray-700"
-                />
-                <h3 className="text-2xl font-semibold mb-3 text-gray-800 dark:text-white">
-                  {book.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {book.description}
-                </p>
-                <span className="text-red-500 hover:text-red-600 font-medium flex items-center gap-1">
-                  Learn More <ArrowRight size={20} />
-                </span>
-              </div>
-            </Link>
-          ))}
+
+        <div className="grid md:grid-cols-2 w-full gap-5">
+          {filteredBooks.map((book, index) => <Card item={book} index={index} />)}
         </div>
 
         {filteredBooks.length === 0 && (

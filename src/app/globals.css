@@ -86,7 +86,7 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at var(--x) var(--y), #ffffff10, transparent 10vmin);
+    radial-gradient(circle at var(--x) var(--y), #ffffff10, transparent 15vmin);
   background-attachment: fixed;
   opacity: var(--active, 0);
   transition: opacity 0.2s;
@@ -105,8 +105,8 @@ body {
   pointer-events: none;
   border-radius: .5rem;
   mask:
-    linear-gradient(#ea580c, #ea580c) 50% 0 / 100% 4px no-repeat,
-    linear-gradient(#ea580c, #ea580c) 50% 100% / 100% 4px no-repeat,
-    linear-gradient(#ea580c, #ea580c) 0 50% / 4px 100% no-repeat,
-    linear-gradient(#ea580c, #ea580c) 100% 50% / 4px 100% no-repeat;
+    linear-gradient(#ea580c, #ea580c50) 50% 0 / 100% 4px no-repeat,
+    linear-gradient(#ea580c, #ea580c50) 50% 100% / 100% 4px no-repeat,
+    linear-gradient(#ea580c, #ea580c50) 0 50% / 4px 100% no-repeat,
+    linear-gradient(#ea580c, #ea580c50) 100% 50% / 4px 100% no-repeat;
 }
