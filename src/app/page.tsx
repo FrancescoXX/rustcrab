@@ -10,9 +10,6 @@ import CookieConsentBanner from '../components/CookieConsent';
 import Books from '../components/BooksSection';
 import DevToolsSection from '../components/DevToolsSection';
 import ProjectsSection from '../components/ProjectsSection';
-import Navbar from '../components/navbar/Navbar';
-import MobileNav from '../components/navbar/MobileNav';
-
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('home');
@@ -44,13 +41,13 @@ export default function Home() {
                 height={50}
               />
             </h1>
-            <p className="text-xl">The non-crap resource for Rust Developers.</p>
-            <GitHubStars repo="FrancescoXX/rustcrab" />
-            <br />
-            <br />
-            <p className="text-xl">
-              🦀 An Open source project with everything you need to learn about Rust 🦀
+            {/* <p className="text-xl">The non-crap resource for Rust Developers.</p> */}
+            
+            <p className="text-l">
+              An Open Source project with everything you need to learn about Rust.
             </p>
+            <br />
+            <GitHubStars repo="FrancescoXX/rustcrab" />
             <br />
             <p className="text-xl">Subscribe to get the latest updates</p>
             <SubstackEmbed />
@@ -61,8 +58,7 @@ export default function Home() {
 
   return (
     <div className="bg-white dark:bg-black min-h-screen text-black dark:text-white flex flex-col">
-      <Header />
-      <Navbar setSection={setCurrentSection} />
+      <Header setSection={setCurrentSection} />
       <main className="flex-grow flex flex-col items-center justify-center text-center space-y-4">
         {renderSection()}
       </main>
