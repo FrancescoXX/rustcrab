@@ -5,9 +5,9 @@ import Link from "next/link";
 import { ArrowRight, Search } from "lucide-react";
 import { lessons } from "@/data/lessons";
 
-export default function DevTools() {
+export default function Lessons() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredTools, setFilteredTools] = useState(lessons);
+  const [filteredLessons, setFilteredLessons] = useState(lessons);
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value.toLowerCase();
@@ -15,7 +15,7 @@ export default function DevTools() {
     const filtered = lessons.filter((lessons) =>
       lessons.title.toLowerCase().includes(term)
     );
-    setFilteredTools(filtered);
+    setFilteredLessons(filtered);
   };
 
   return (
@@ -29,7 +29,7 @@ export default function DevTools() {
           <div className="relative">
             <input
               type="text"
-              placeholder="Search tools..."
+              placeholder="Search lessons..."
               value={searchTerm}
               onChange={handleSearch}
               className="w-full p-3 pl-10 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -42,7 +42,7 @@ export default function DevTools() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredTools.map((lesson, index) => (
+          {filteredLessons.map((lesson, index) => (
             <Link
               href={lesson.link}
               key={index}
@@ -56,10 +56,9 @@ export default function DevTools() {
                     width="350"
                     height="200"
                     src={lesson.embed}
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                     className="rounded-lg"
                   ></iframe>
                 </div>
@@ -75,9 +74,9 @@ export default function DevTools() {
           ))}
         </div>
 
-        {filteredTools.length === 0 && (
+        {filteredLessons.length === 0 && (
           <p className="text-center text-gray-600 dark:text-gray-400 mt-8">
-            No tools found matching your search.
+            No lessons found matching your search.
           </p>
         )}
       </div>
