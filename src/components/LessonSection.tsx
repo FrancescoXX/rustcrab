@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function LessonSection() {
   return (
-    <section className="py-16 dark:bg-gray-800 bg-gray-200 rounded-md my-4">
+    <section className="py-16 rounded-md my-4">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-center text-current">
           Rust lessons
@@ -16,7 +16,7 @@ export default function LessonSection() {
               target="_blank"
               href={lesson.link}
               key={index}
-              className="dark:bg-gray-900 bg-gray-100 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
+              className="dark:bg-gray-900 bg-gray-200 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-[350px] overflow-hidden h-0 pb-[56.25%] rounded-lg">

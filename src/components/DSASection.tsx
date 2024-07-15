@@ -32,7 +32,7 @@ const DSAToolSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 dark:bg-gray-800 bg-gray-200 rounded-md my-4">
+    <section className="py-16 rounded-md my-4">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-center text-current">
           Data Structures in Rust
@@ -41,7 +41,7 @@ const DSAToolSection: React.FC = () => {
           {dsas.slice(0, 3).map((dsa, index) => (
             <div
               key={index}
-              className="dark:bg-gray-900 bg-gray-100 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
+              className="dark:bg-gray-900 bg-gray-200 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 <h3 className="text-2xl font-semibold mb-3 text-current">

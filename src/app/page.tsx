@@ -1,12 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Image from "next/image";
-import GitHubStars from "../components/GitHubStars";
-import SubstackEmbed from "../components/SubstackEmbed";
-import CookieConsentBanner from "../components/CookieConsent";
 import Books from "../components/BooksSection";
 import DevToolsSection from "../components/DevToolsSection";
 import ProjectsSection from "../components/ProjectsSection";
@@ -55,6 +49,15 @@ export default function Home() {
       </div>
       <div id='dev_tools' className='min-h-dvh'>
         <DevToolsSection />
+      </div>
+      <div id='lessons' className='min-h-dvh'>
+        <LessonSection />
+      </div>
+      <div id='people' className='min-h-dvh'>
+        <PeopleSection />
+      </div>
+      <div id='dsas' className='min-h-dvh'>
+        <DSAToolSection />
       </div>
       <div id='projects' className='min-h-dvh'>
         <ProjectsSection />

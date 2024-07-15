@@ -4,6 +4,7 @@ import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
 import Image from "next/image";
 import Navbar from "./navbar/Navbar";
 import MobileNav from "./navbar/MobileNav";
+import Link from "next/link";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -61,11 +62,12 @@ export default function Header() {
         <div className="flex items-center sm:hidden">
           <MobileNav />
         </div>
-        <span
+        <Link
+          href="/"
           className="text-2xl font-bold cursor-pointer hidden sm:block"
         >
           Rustcrab
-        </span>
+        </Link>
         <div className="hidden sm:block">
           <Navbar  />
         </div>
