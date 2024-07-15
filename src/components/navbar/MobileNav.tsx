@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -7,18 +8,15 @@ interface menuObject {
   link: string;
 }
 
-interface MobileNavProps {
-  setSection: (section: string) => void;
-}
 
 export const menuItems: menuObject[] = [
-  { items: 'Home', link: 'home' },
-  { items: 'Books', link: 'books' },
-  { items: 'Projects', link: 'projects' },
-  { items: 'Dev Tools', link: 'dev tools' },
+  { items: 'Home', link: '/' },
+  { items: 'Books', link: '#books' },
+  { items: 'Projects', link: '#projects' },
+  { items: 'Dev Tools', link: '#dev_tools' },
 ];
 
-const MobileNav: React.FC<MobileNavProps> = ({ setSection }) => {
+const MobileNav: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLUListElement>(null);
 
@@ -27,7 +25,6 @@ const MobileNav: React.FC<MobileNavProps> = ({ setSection }) => {
   };
 
   const handleMenuItemClick = (link: string) => {
-    setSection(link);
     setMenuOpen(false); // Close the menu after clicking an item
   };
 
@@ -60,13 +57,14 @@ const MobileNav: React.FC<MobileNavProps> = ({ setSection }) => {
           className="absolute left-0 top-12 py-2 w-48 bg-white dark:bg-black border rounded-lg shadow-lg z-50"
         >
           {menuItems.map((item, index) => (
-            <li
+            <Link
+              href={`${item.link}`}
               key={index}
-              className="cursor-pointer p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="cursor-pointer p-2 hover:bg-gray-200 dark:hover:bg-gray-700 block"
               onClick={() => handleMenuItemClick(item.link)}
             >
               {item.items}
-            </li>
+            </Link>
           ))}
         </ul>
       )}
