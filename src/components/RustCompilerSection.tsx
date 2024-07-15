@@ -53,7 +53,11 @@ const RustCompilerSection = () => {
           onClick={onRun}
           className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
         >
-          {running ? <Loader2 size={24} /> : <PlayIcon size={24} />}
+          {running ? (
+            <Loader2 className="animate-spin" size={24} />
+          ) : (
+            <PlayIcon size={24} />
+          )}
         </button>
       </div>
 
