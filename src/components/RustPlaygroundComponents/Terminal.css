@@ -1,0 +1,53 @@
+/* src/TerminalCard.css */
+.terminal-card {
+    width: 600px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: start;
+  }
+  
+  .terminal-header {
+    background-color: #333333;
+    padding: 10px;
+    display: flex;
+    align-items: start;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .button.red {
+    background-color: #ff5f56;
+  }
+  
+  .button.yellow {
+    background-color: #ffbd2e;
+  }
+  
+  .button.green {
+    background-color: #27c93f;
+  }
+  
+  .terminal-body {
+    padding: 20px;
+    background-color: #1e1e1e;
+  }
+  
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
