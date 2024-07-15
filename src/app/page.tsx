@@ -1,16 +1,19 @@
 "use client";
 
-import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Image from 'next/image';
-import GitHubStars from '../components/GitHubStars';
-import SubstackEmbed from '../components/SubstackEmbed';
-import CookieConsentBanner from '../components/CookieConsent';
-import Books from '../components/BooksSection';
-import DevToolsSection from '../components/DevToolsSection';
-import ProjectsSection from '../components/ProjectsSection';
-import SubstackCustom from '../components/SubstackCustom';
+import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Image from "next/image";
+import GitHubStars from "../components/GitHubStars";
+import SubstackEmbed from "../components/SubstackEmbed";
+import CookieConsentBanner from "../components/CookieConsent";
+import Books from "../components/BooksSection";
+import DevToolsSection from "../components/DevToolsSection";
+import ProjectsSection from "../components/ProjectsSection";
+import SubstackCustom from "../components/SubstackCustom";
+import DSAToolSection from "@/components/DSASection";
+import PeopleSection from "@/components/PeopleSection";
+import LessonSection from "@/components/LessonSection";
 
 export default function Home() {
 

@@ -1,10 +1,9 @@
-'use client'; // This directive marks the component as a Client Component
-
-import { useState, useEffect } from 'react';
-import { FaGithub, FaSun, FaMoon } from 'react-icons/fa';
-import Image from 'next/image';
-import Navbar from './navbar/Navbar';
-import MobileNav from './navbar/MobileNav';
+"use client"; // This directive marks the component as a Client Component
+import { useState, useEffect } from "react";
+import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
+import Image from "next/image";
+import Navbar from "./navbar/Navbar";
+import MobileNav from "./navbar/MobileNav";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -12,11 +11,15 @@ export default function Header() {
   const [starsCount, setStarsCount] = useState<number | null>(null);
 
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
       setDarkMode(true);
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
       setDarkMode(false);
     }
 
@@ -24,24 +27,24 @@ export default function Header() {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/FrancescoXX/rustcrab')
+    fetch("https://api.github.com/repos/FrancescoXX/rustcrab")
       .then((response) => response.json())
       .then((data) => setStarsCount(data.stargazers_count))
-      .catch((error) => console.error('Error fetching GitHub stars:', error));
+      .catch((error) => console.error("Error fetching GitHub stars:", error));
   }, []);
 
   const toggleDarkMode = () => {
     if (darkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
     } else {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
     }
     setDarkMode(!darkMode);
   };
@@ -49,7 +52,9 @@ export default function Header() {
   return (
     <header
       className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-2 0 z-40 ${
-        isScrolled ? 'backdrop-blur-md bg-opacity-70 bg-transparent' : 'bg-white dark:bg-black'
+        isScrolled
+          ? "backdrop-blur-md bg-opacity-70 bg-transparent"
+          : "bg-white dark:bg-black"
       }`}
     >
       <div className="flex items-center space-x-4">
@@ -73,7 +78,12 @@ export default function Header() {
           className="text-2xl"
           title="Rustdevs on daily.dev"
         >
-          <Image src="/icons/daily.dev-icon.png" alt="daily.dev" width={24} height={24} />
+          <Image
+            src="/icons/daily.dev-icon.png"
+            alt="daily.dev"
+            width={24}
+            height={24}
+          />
         </a>
         <a
           href="https://github.com/FrancescoXX/rustcrab"
@@ -87,7 +97,11 @@ export default function Header() {
             <span className="text-xl">{starsCount} ★</span>
           )}
         </a>
-        <button onClick={toggleDarkMode} className="text-2xl" title="Dark/Light mode">
+        <button
+          onClick={toggleDarkMode}
+          className="text-2xl"
+          title="Dark/Light mode"
+        >
           {darkMode ? <FaSun /> : <FaMoon />}
         </button>
       </div>

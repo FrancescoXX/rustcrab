@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .border-rust-orange {
@@ -71,7 +71,6 @@ body {
   }
 }
 
-
 /* for mouse tracking border in tool card */
 .toolsInnerCard {
   position: relative !important;
@@ -86,25 +85,30 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at var(--x) var(--y), #ffffff10, transparent 15vmin);
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    #ffffff10,
+    transparent 15vmin
+  );
   background-attachment: fixed;
   opacity: var(--active, 0);
   transition: opacity 0.2s;
   pointer-events: none;
 }
 
-
 .toolsInnerCard:before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at var(--x) var(--y), #ea580c, transparent 18vmin),
+  background: radial-gradient(
+      circle at var(--x) var(--y),
+      #ea580c,
+      transparent 18vmin
+    ),
     transparent;
   background-attachment: fixed;
   pointer-events: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   mask:
     linear-gradient(#ea580c, #ea580c50) 50% 0 / 100% 4px no-repeat,
     linear-gradient(#ea580c, #ea580c50) 50% 100% / 100% 4px no-repeat,

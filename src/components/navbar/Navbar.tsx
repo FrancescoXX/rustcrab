@@ -8,9 +8,12 @@ interface menuObject {
 }
 
 export const menuItems: menuObject[] = [
-  { items: 'Books', link: '#books' },
-  { items: 'Projects', link: '#projects' },
-  { items: 'Dev Tools', link: '#dev_tools' },
+  { items: "Books", link: "#books" },
+  { items: "Projects", link: "#projects" },
+  { items: "Lessons", link: "lessons" },
+  { items: "Dev Tools", link: "#dev_tools" },
+  { items: "DSA Example", link: "dsas" },
+  { items: "People", link: "people" },
 ];
 
 const Navbar: React.FC = () => {
