@@ -111,3 +111,7 @@ Contributions are welcome! Please follow these guidelines to ensure a smooth and
    - Update the documentation if your changes affect any part of it.
 
 By following these guidelines, you help maintain a collaborative and efficient workflow. Thank you for contributing!
+
+## Code of Conduct
+
+Please note that RustCrab is governed by a [Code of Conduct](CODE_OF_CONDUCT.md).
