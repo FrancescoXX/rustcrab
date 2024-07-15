@@ -70,7 +70,6 @@ export default function Footer() {
           </p>
         </span>
       </div>
-
     </footer>
   )
 }
