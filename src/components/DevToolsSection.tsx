@@ -4,7 +4,7 @@ import Card from "./Card";
 
 export default function DevToolsSection() {
   return (
-    <section className="py-16 pt-10  rounded-md my-4">
+    <section className="min-h-dvh pt-10  rounded-md my-4">
       <div className="mx-auto px-4 container">
         <h2 className="text-4xl font-bold mb-8 text-center text-current">
           Rust Developer Tools

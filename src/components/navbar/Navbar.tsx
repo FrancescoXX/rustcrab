@@ -1,35 +1,31 @@
-"use client";
-import React from "react";
+'use client';
+import Link from 'next/link';
+import React from 'react';
 
 interface menuObject {
   items: string;
   link: string;
 }
 
-interface NavbarProps {
-  setSection: (section: string) => void;
-}
-
 export const menuItems: menuObject[] = [
-  { items: "Books", link: "books" },
-  { items: "Projects", link: "projects" },
-  { items: "Lessons", link: "lessons" },
-  { items: "Dev Tools", link: "dev tools" },
-  { items: "DSA Example", link: "dsas" },
-  { items: "People", link: "people" },
+  { items: "Books", link: "#books" },
+  { items: "Projects", link: "#projects" },
+  { items: "Lessons", link: "#lessons" },
+  { items: "Dev Tools", link: "#dev_tools" },
+  { items: "DSA Example", link: "#dsas" },
+  { items: "People", link: "#people" },
 ];
 
-const Navbar: React.FC<NavbarProps> = ({ setSection }) => {
+const Navbar: React.FC = () => {
   return (
     <ul className="flex space-x-4 capitalize">
       {menuItems.map((item, index) => (
-        <li
+        <Link
+          href={item.link}
           key={index}
-          className="cursor-pointer transition ease-in-out"
-          onClick={() => setSection(item.link)}
-        >
+          className="cursor-pointer transition ease-in-out">
           <span className="hover:text-orange-500">{item.items}</span>
-        </li>
+        </Link>
       ))}
     </ul>
   );

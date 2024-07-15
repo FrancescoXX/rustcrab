@@ -4,12 +4,9 @@ import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
 import Image from "next/image";
 import Navbar from "./navbar/Navbar";
 import MobileNav from "./navbar/MobileNav";
+import Link from "next/link";
 
-interface HeaderProps {
-  setSection: (section: string) => void;
-}
-
-export default function Header({ setSection }: HeaderProps) {
+export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [starsCount, setStarsCount] = useState<number | null>(null);
@@ -63,16 +60,16 @@ export default function Header({ setSection }: HeaderProps) {
     >
       <div className="flex items-center space-x-4">
         <div className="flex items-center sm:hidden">
-          <MobileNav setSection={setSection} />
+          <MobileNav />
         </div>
-        <span
-          onClick={() => setSection("home")}
+        <Link
+          href="/"
           className="text-2xl font-bold cursor-pointer hidden sm:block"
         >
           Rustcrab
-        </span>
+        </Link>
         <div className="hidden sm:block">
-          <Navbar setSection={setSection} />
+          <Navbar  />
         </div>
       </div>
       <div className="flex items-center space-x-4">
