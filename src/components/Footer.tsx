@@ -57,7 +57,7 @@ export default function Footer() {
           <FaThreads />
         </a>
       </div>
-      <div className='text-white sm:flex sm:items-center sm:justify-center gap-3'>
+      <div className='text-black dark:text-white sm:flex sm:items-center sm:justify-center gap-3'>
         <span className='sm:text-center gap-2 lg:flex lg:items-center lg:justify-center sm:block md:flex text-xs'>
           <p className='gap-2'>
             &copy; {currentYear}
