@@ -74,7 +74,7 @@ export default function Header() {
       </div>
       <div className="flex items-center space-x-4">
         <a
-          href="https://app.daily.dev/squads/rustdevs"
+          href="https://dly.to/vRJ9aTACP65"
           target="_blank"
           rel="noopener noreferrer"
           className="text-2xl"
