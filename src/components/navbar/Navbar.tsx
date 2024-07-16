@@ -10,7 +10,7 @@ const menuItems = [
   { items: "Books", link: "/#books" },
   { items: "Projects", link: "/#projects" },
   { items: "Lessons", link: "/#lessons" },
-  { items: "Dev Tools", link: "/#devtools" },
+  { items: "Dev Tools", link: "/#dev_tools" },
   { items: "DSA Example", link: "/#dsas" },
   { items: "People", link: "/#people" },
 ];
