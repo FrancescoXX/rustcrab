@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
+    "axios": "^1.7.2",
     "canvas-confetti": "^1.9.3",
     "js-cookie": "^3.0.5",
     "js-yaml": "^4.1.0",
