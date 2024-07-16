@@ -46,7 +46,7 @@ const DSAPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
           Data Structures in Rust
@@ -72,7 +72,7 @@ const DSAPage: React.FC = () => {
           {filteredDSAs.map((dsa, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
+              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-800 dark:text-white">
