@@ -11,6 +11,11 @@ It includes a real-time display of the number of stars on the GitHub repository 
 
 The application also integrates with daily.dev for additional developer resources.
 
+### Project Stack
+- Next.js
+- Tailwind CSS
+- TypeScript
+
 ## Features
 
 - **Real-time GitHub Stars**: Displays the current number of stars for the repository.
@@ -18,6 +23,7 @@ The application also integrates with daily.dev for additional developer resource
 - **Responsive Design**: Optimized for various screen sizes using Tailwind CSS.
 - **Developer Resources**: Includes links to daily.dev and GitHub repository.
 - **Social Media Integration**: Links to Twitter, LinkedIn, YouTube, Discord, and Instagram.
+- **Google analytics integration**: Links to Google Analytics to monitor real-time analytics 
 
 ## Getting Started
 
