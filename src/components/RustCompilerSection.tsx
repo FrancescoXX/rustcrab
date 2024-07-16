@@ -47,7 +47,7 @@ const RustCompilerSection = () => {
   return (
     <div className="flex flex-col items-center justify-center  p-4">
       <div className="flex flex-row justify-between items-center w-10/12 mb-5">
-        <h2 className="text-4xl font-bold  text-current">Rust Playground</h2>
+        <h2 className="text-4xl font-bold  text-current">Playground</h2>
         <button
           disabled={running}
           onClick={onRun}

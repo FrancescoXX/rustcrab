@@ -15,7 +15,7 @@ export const menuItems: menuObject[] = [
   { items: "Projects", link: "projects" },
   { items: "Dev Tools", link: "dev tools" },
   { items: "DSA Example", link: "dsas" },
-  { items: "Rust Playground", link: "rustcmp" },
+  { items: "Playground", link: "rustcmp" },
 ];
 
 const Navbar: React.FC<NavbarProps> = ({ setSection }) => {
