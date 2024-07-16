@@ -44,24 +44,6 @@ export default function Home() {
               <SubstackEmbed />
             </div> */}
       </div>
-      <div id='books' className='min-h-dvh'>
-        <Books />
-      </div>
-      <div id='dev_tools' className='min-h-dvh'>
-        <DevToolsSection />
-      </div>
-      <div id='lessons' className='min-h-dvh'>
-        <LessonSection />
-      </div>
-      <div id='people' className='min-h-dvh'>
-        <PeopleSection />
-      </div>
-      <div id='dsas' className='min-h-dvh'>
-        <DSAToolSection />
-      </div>
-      <div id='projects' className='min-h-dvh'>
-        <ProjectsSection />
-      </div>
     </main>
   );
 }
