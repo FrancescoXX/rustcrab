@@ -12,7 +12,7 @@ import LessonSection from "@/components/LessonSection";
 export default function Home() {
 
   return (
-    <main className="flex-grow flex flex-col items-center justify-center text-center space-y-6">
+    <main className="flex-grow flex flex-col items-center justify-center text-center space-y-6 overflow-hidden">
       <div className="flex flex-col items-center justify-center text-center space-y-6 p-4 h-dvh">
         <Image
           src="/rust_lgo_720.png"
