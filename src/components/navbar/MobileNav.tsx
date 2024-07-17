@@ -13,9 +13,9 @@ export const menuItems: menuObject[] = [
   { items: "Books", link: "#books" },
   { items: "Projects", link: "#projects" },
   { items: "Dev Tools", link: "#dev_tools" },
-  { items: "Lesson", link: "#lesson" },
+  { items: "Lesson", link: "#lessons" },
   { items: "People", link: "#people" },
-  { items: "DSA", link: "#dsa" },
+  { items: "DSA", link: "#dsas" },
 ];
 
 const MobileNav: React.FC = () => {
