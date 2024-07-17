@@ -11,12 +11,12 @@ interface menuObject {
 
 export const menuItems: menuObject[] = [
   { items: 'Home', link: '/' },
-  { items: 'Books', link: '#books' },
-  { items: 'Projects', link: '#projects' },
-  { items: 'Dev Tools', link: '#dev_tools' },
-  { items: 'Lesson', link: '#lesson' },
-  { items: 'People', link: '#people' },
-  { items: 'DSA', link: '#dsa' }
+  { items: 'Books', link: '/#books' },
+  { items: 'Projects', link: '/#projects' },
+  { items: 'Dev Tools', link: '/#dev_tools' },
+  { items: 'Lesson', link: '/#lessons' },
+  { items: 'People', link: '/#people' },
+  { items: 'DSA', link: '/#dsas' }
 ];
 
 const MobileNav: React.FC = () => {
