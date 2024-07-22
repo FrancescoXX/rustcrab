@@ -47,4 +47,12 @@ export const books: Array<Books> = [
     cover: "/covers/rust_book_05.jpg",
     link: "https://www.packtpub.com/product/mastering-rust/9781788993050",
   },
+  {
+    title: "Zero To Production In Rust",
+    author: "Luca Palmieri",
+    description:
+      "Zero To Production is the ideal starting point for your journey as a Rust backend developer.",
+    cover: "/covers/rust_book_06.jpg",
+    link: "https://www.zero2prod.com/",
+  },
 ];
