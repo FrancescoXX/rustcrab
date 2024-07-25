@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 type searchProps = {
   name:string,
-  globalFunc:Function
+  globalFunc:(filteredData: global[]) => void
 }
 
 type global = {
