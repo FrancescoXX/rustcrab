@@ -1,27 +1,28 @@
-'use client';
-import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 interface menuObject {
   items: string;
   link: string;
 }
 
-
 export const menuItems: menuObject[] = [
-  { items: 'Home', link: '/' },
-  { items: 'Books', link: '/#books' },
-  { items: 'Projects', link: '/#projects' },
-  { items: 'Dev Tools', link: '/#dev_tools' },
-  { items: 'Lesson', link: '/#lessons' },
-  { items: 'People', link: '/#people' },
-  { items: 'DSA', link: '/#dsas' }
+  { items: "Home", link: "/" },
+  { items: "Books", link: "/#books" },
+  { items: "Projects", link: "/#projects" },
+  { items: "Dev Tools", link: "/#dev_tools" },
+  { items: "Lesson", link: "/#lessons" },
+  { items: "People", link: "/#people" },
+  { items: "DSA", link: "/#dsas" },
 ];
 
 const MobileNav: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLUListElement>(null);
+  
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);

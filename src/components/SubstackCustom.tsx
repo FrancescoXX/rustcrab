@@ -3,10 +3,10 @@ import { FaCheck } from "react-icons/fa";
 import confetti from "canvas-confetti";
 
 export default function SubstackCustom() {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>("");
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -26,11 +26,13 @@ export default function SubstackCustom() {
       setIsSubscribed(true);
       setEmail("");
       setMessage(
-        "We've sent you a confirmation email. Please click the link to complete your signup!",
+        "We've sent you a confirmation email. Please click the link to complete your signup!"
       );
+      
       triggerConfetti();
     } else {
       const data = await response.json();
+
       alert(data.error || "Subscription failed. Please try again.");
     }
   };
@@ -90,7 +92,11 @@ export default function SubstackCustom() {
           <button
             type="submit"
             className={`px-4 py-2 text-white rounded-r-md transition duration-300 flex items-center justify-center
-              ${isSubscribed ? "bg-gradient-to-r from-orange-500 to-orange-700" : "bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-yellow-600"}
+              ${
+                isSubscribed
+                  ? "bg-gradient-to-r from-orange-500 to-orange-700"
+                  : "bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-yellow-600"
+              }
               group-hover:border-red-500 cursor-pointer`}
             disabled={isLoading || isSubscribed}
             style={{

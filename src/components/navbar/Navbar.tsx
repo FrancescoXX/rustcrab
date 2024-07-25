@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import React from 'react';
 
 interface MenuObject {
   items: string;
   link: string;
 }
 
-const menuItems = [
+const menuItems: MenuObject[] = [
   { items: "Books", link: "/#books" },
   { items: "Projects", link: "/#projects" },
   { items: "Lessons", link: "/#lessons" },

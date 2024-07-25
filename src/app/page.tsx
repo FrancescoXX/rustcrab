@@ -1,16 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import Books from "../components/BooksSection";
-import DevToolsSection from "../components/DevToolsSection";
-import ProjectsSection from "../components/ProjectsSection";
-import SubstackCustom from "../components/SubstackCustom";
+
+import Books from "@/components/BooksSection";
+import DevToolsSection from "@/components/DevToolsSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import SubstackCustom from "@/components/SubstackCustom";
 import DSAToolSection from "@/components/DSASection";
 import PeopleSection from "@/components/PeopleSection";
 import LessonSection from "@/components/LessonSection";
 
 export default function Home() {
-
   return (
     <main className="flex-grow flex flex-col items-center justify-center text-center space-y-6">
       <div className="flex flex-col items-center justify-center text-center space-y-6 p-4 h-dvh">

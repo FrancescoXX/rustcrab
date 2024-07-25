@@ -1,22 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Search } from "lucide-react";
-import { tools } from "@/data/tools";
+
+import { Tool, tools } from "@/data/tools";
 import Card from "@/components/Card";
 
 export default function DevTools() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredTools, setFilteredTools] = useState(tools);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [filteredTools, setFilteredTools] = useState<Tool[]>(tools);
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value.toLowerCase();
-    setSearchTerm(term);
+
     const filtered = tools.filter(
       (tool) =>
         tool.name.toLowerCase().includes(term) ||
         tool.description.toLowerCase().includes(term),
     );
+    
+    setSearchTerm(term);
     setFilteredTools(filtered);
   };
 

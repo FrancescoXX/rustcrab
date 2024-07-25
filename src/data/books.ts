@@ -1,4 +1,4 @@
-export interface Books {
+export interface Book {
   title: string;
   author: string;
   description: string;
@@ -6,7 +6,7 @@ export interface Books {
   link: string;
 }
 
-export const books: Array<Books> = [
+export const books: Array<Book> = [
   {
     title: "The Rust Programming Language",
     author: "Steve Klabnik and Carol Nichols",

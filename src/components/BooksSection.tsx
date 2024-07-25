@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import { books } from "@/data/books";
 import Card from "./Card";
 

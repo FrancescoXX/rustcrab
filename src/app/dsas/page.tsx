@@ -1,27 +1,30 @@
 "use client";
 
-import React, { useState } from "react";
-import { dsas, DSA } from "@/data/dsa"; // Update the path to your data
+import { useState } from "react";
 import { Search } from "lucide-react";
 import { FaCopy } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import SyntaxHighlighter from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+
+import { dsas, DSA } from "@/data/dsa"; // Update the path to your data
 
 const DSAPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredDSAs, setFilteredDSAs] = useState(dsas);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [filteredDSAs, setFilteredDSAs] = useState<DSA[]>(dsas);
   const [selectedTool, setSelectedTool] = useState<DSA | null>(null);
-  const [copySuccess, setCopySuccess] = useState("");
+  const [copySuccess, setCopySuccess] = useState<string>("");
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value.toLowerCase();
-    setSearchTerm(term);
+
     const filtered = dsas.filter(
       (dsa) =>
         dsa.data_structure.toLowerCase().includes(term) ||
-        dsa.description.toLowerCase().includes(term),
+        dsa.description.toLowerCase().includes(term)
     );
+    
+    setSearchTerm(term);
     setFilteredDSAs(filtered);
   };
 

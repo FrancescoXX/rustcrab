@@ -1,10 +1,12 @@
 import { Inter, Roboto } from "next/font/google";
 import Head from "next/head";
-import "./globals.css";
 import Script from "next/script";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });

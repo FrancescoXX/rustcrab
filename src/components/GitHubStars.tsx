@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface GitHubStarsProps {
   repo: string;
@@ -14,6 +14,7 @@ export default function GitHubStars({ repo }: GitHubStarsProps) {
     try {
       const response = await fetch(`https://api.github.com/repos/${repo}`);
       const data = await response.json();
+      
       setStars(data.stargazers_count);
     } catch (error) {
       console.error("Error fetching GitHub stars:", error);
