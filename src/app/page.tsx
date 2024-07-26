@@ -10,7 +10,6 @@ import PeopleSection from "@/components/PeopleSection";
 import LessonSection from "@/components/LessonSection";
 
 export default function Home() {
-
   return (
     <main className="flex-grow flex flex-col items-center justify-center text-center space-y-6">
       <div className="flex flex-col items-center justify-center text-center space-y-6 p-4 h-dvh">
@@ -40,9 +39,14 @@ export default function Home() {
           <SubstackCustom />
         </div>
         <br />
-        {/* <div className="w-full max-w-md">
-              <SubstackEmbed />
-            </div> */}
+        <a
+          href="https://mybook.to/YJI6DI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-block px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-700 text-white font-bold text-lg rounded-full hover:from-orange-600 hover:to-yellow-600 transition duration-300"
+        >
+          Preorder the Rust Book Now!
+        </a>
       </div>
       <div id='books' className='min-h-dvh'>
         <Books />
