@@ -31,7 +31,8 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
           type="application/javascript"
           id="dark-mode-detection"
           dangerouslySetInnerHTML={{ __html: initDarkModeDetection }}
-        ></script>        <Script
+        ></script>
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-J6GRE0TKHY"
         ></Script>
