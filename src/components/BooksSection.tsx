@@ -4,11 +4,11 @@ import Card from "./Card";
 
 export default function BooksSection() {
   return (
-    <section className="py-16 pt-10  rounded-md my-4">
-      <div className="mx-auto px-4 container">
-        <h2 className="text-4xl font-bold mb-8 text-center text-current">
-          Books to Learn Rust
-        </h2>
+    <section className="py-16 w-full rounded-md my-4">
+    <div className="container mx-auto px-4">
+      <h2 className="text-4xl font-bold mb-8 text-center text-current">
+      Books to Learn Rust
+      </h2>
         <div className="grid md:grid-cols-2 w-full gap-5">
           {books.slice(0, 3).map((book, index) => (
             <Card item={book} key={index} />
