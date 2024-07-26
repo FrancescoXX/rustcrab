@@ -7,7 +7,9 @@ import MobileNav from "./navbar/MobileNav";
 import Link from "next/link";
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(typeof localStorage !== 'undefined' && localStorage.theme === 'dark');
+  const [darkMode, setDarkMode] = useState(
+    typeof localStorage !== "undefined" && localStorage.theme === "dark",
+  );
   const [isScrolled, setIsScrolled] = useState(false);
   const [starsCount, setStarsCount] = useState<number | null>(null);
 
