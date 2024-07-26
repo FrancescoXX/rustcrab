@@ -14,9 +14,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // "dark" "light" or null. Null means no preference.
+  const initDarkModeDetection = `
+(function () {
+const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const themeChosen = localStorage.theme;
+if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
+  document.documentElement.classList.add("dark");
+  localStorage.theme = 'dark';
+}
+})()`
+
   return (
     <html lang="en">
       <head>
+      <script type="application/javascript" id="dark-mode-detection" dangerouslySetInnerHTML={{ __html: initDarkModeDetection }}></script>
       <meta property="og:title" content="Rustcrab" />
         <meta
           property="og:description"

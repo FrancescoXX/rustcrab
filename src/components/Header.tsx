@@ -7,23 +7,11 @@ import MobileNav from "./navbar/MobileNav";
 import Link from "next/link";
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(typeof localStorage !== 'undefined' && localStorage.theme === 'dark');
   const [isScrolled, setIsScrolled] = useState(false);
   const [starsCount, setStarsCount] = useState<number | null>(null);
 
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      setDarkMode(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setDarkMode(false);
-    }
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
