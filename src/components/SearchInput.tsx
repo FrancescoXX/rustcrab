@@ -2,8 +2,8 @@ import { Search } from 'lucide-react'
 import React, { useState } from 'react'
 
 type SearchInputProps={
-  data: Array<{ [key: string]: string }>,
-  globalFunc: (filteredData: Array<{ [key: string]: string }>) => void,
+  data: Array<{}>,
+  globalFunc: (arr:any[]) => void,
   searchBy: string
 }
 
@@ -16,7 +16,7 @@ function SearchInput({data,globalFunc,searchBy}:SearchInputProps){
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
   
-    const filteredData = data.filter((item)=>{
+    const filteredData = data.filter((item:object)=>{
         for (const [key,value] of Object.entries(item)){
           if(checkForFields.includes(key)){
             if(value.toLowerCase().includes(term)) return true;
