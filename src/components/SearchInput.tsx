@@ -10,20 +10,18 @@ type SearchInputProps={
 function SearchInput({data,globalFunc,searchBy}:SearchInputProps){
 
  const [searchTerm,setSearchTerm] = useState('');
+ const checkForFields = searchBy.split(',');
 
   const handleSearch = (event:React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
-    
-    const checkForFields = searchBy.split(',');
-      
+  
     const filteredData = data.filter((item)=>{
         for (const [key,value] of Object.entries(item)){
           if(checkForFields.includes(key)){
             if(value.toLowerCase().includes(term)) return true;
           }
         }
-        return false;
     })
       
     globalFunc(filteredData);
