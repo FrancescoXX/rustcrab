@@ -20,9 +20,10 @@ function SearchInput({data,globalFunc,searchBy}:SearchInputProps){
     const filteredData = data.filter((item)=>{
         for (const [key,value] of Object.entries(item)){
           if(checkForFields.includes(key)){
-            if(value.toLowerCase().includes(term)) return item;
+            if(value.toLowerCase().includes(term)) return true;
           }
         }
+        return false;
     })
       
     globalFunc(filteredData);
