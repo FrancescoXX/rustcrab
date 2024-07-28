@@ -2,9 +2,9 @@ import { Search } from 'lucide-react'
 import React, { useState } from 'react'
 
 type SearchInputProps={
-  data:Array<Object>,
-  globalFunc:([]) => void,
-  searchBy:string
+  data: Array<{ [key: string]: string }>,
+  globalFunc: (filteredData: Array<{ [key: string]: string }>) => void,
+  searchBy: string
 }
 
 function SearchInput({data,globalFunc,searchBy}:SearchInputProps){
