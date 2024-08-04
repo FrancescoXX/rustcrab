@@ -14,10 +14,10 @@ type Item = {
 
 type CardProps = {
   item: Item;
-  key: number;
+  id: number;
 };
 
-const Card: FC<CardProps> = ({ item, key }) => {
+const Card: FC<CardProps> = ({ item, id }) => {
   const updateCursor = (event: PointerEvent) => {
     document.documentElement.style.setProperty("--x", event.clientX + "px");
     document.documentElement.style.setProperty("--y", event.clientY + "px");
@@ -35,7 +35,7 @@ const Card: FC<CardProps> = ({ item, key }) => {
     <Link
       target="_blank"
       href={item.link}
-      key={key}
+      key={id}
       className="dark:bg-gray-900 group bg-gray-200 rounded-lg shadow-lg transition duration-300 hover:shadow-xl min-w-full toolsInnerCard"
     >
       <div className="flex items-center gap-5 sm:gap-10 relative hover:scale-105 p-6 px-10 transition duration-300">

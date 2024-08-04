@@ -14,6 +14,7 @@ export default function GitHubStars({ repo }: GitHubStarsProps) {
     try {
       const response = await fetch(`https://api.github.com/repos/${repo}`);
       const data = await response.json();
+      console.log(data);
       setStars(data.stargazers_count);
     } catch (error) {
       console.error("Error fetching GitHub stars:", error);

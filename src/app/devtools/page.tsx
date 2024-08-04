@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { tools } from "@/data/tools";
@@ -15,7 +14,7 @@ export default function DevTools() {
     const filtered = tools.filter(
       (tool) =>
         tool.name.toLowerCase().includes(term) ||
-        tool.description.toLowerCase().includes(term),
+        tool.description.toLowerCase().includes(term)
     );
     setFilteredTools(filtered);
   };
@@ -45,7 +44,7 @@ export default function DevTools() {
 
         <div className="grid md:grid-cols-3 w-full gap-5">
           {filteredTools.map((tool, index) => (
-            <Card item={tool} key={index} />
+            <Card item={tool} id={index} key={index} />
           ))}
         </div>
 
