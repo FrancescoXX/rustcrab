@@ -19,15 +19,14 @@ export default function LessonSection() {
               className="dark:bg-gray-900 bg-gray-200 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="relative w-[350px] overflow-hidden h-0 pb-[56.25%] rounded-lg">
+                <div className="relative w-full overflow-hidden h-0 pb-[56.25%] rounded-lg">
                   <iframe
-                    width="350"
-                    height="200"
+
                     src={lesson.embed}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                    className="rounded-lg"
+                    className="absolute top-0 left-0 w-full h-full rounded-lg"
                   ></iframe>
                 </div>
                 <h3 className="text-2xl mt-4 font-semibold mb-3 text-current">

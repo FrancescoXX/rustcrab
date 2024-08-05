@@ -17,7 +17,7 @@ export default function PeopleSection() {
           {people.slice(0, 3).map((p, index) => (
             <div
               key={index}
-              className="dark:bg-gray-900 bg-gray-200 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105 w-full sm:w-1/2 md:w-1/4"
+              className="dark:bg-gray-900 bg-gray-200 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105 w-full sm:w-1/2 md:w-1/8"
             >
               <div className="flex flex-col items-center text-center">
                 <Image

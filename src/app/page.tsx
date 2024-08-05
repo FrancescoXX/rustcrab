@@ -11,8 +11,8 @@ import LessonSection from "@/components/LessonSection";
 
 export default function Home() {
   return (
-    <main className="flex-grow flex flex-col items-center justify-center text-center space-y-6">
-      <div className="flex flex-col items-center justify-center text-center space-y-6 p-4 h-dvh">
+    <main className="flex-grow flex flex-col items-center extra-small:text-[0.75em] small:text-[1rem] justify-center text-center space-y-6">
+      <div className="flex flex-col items-center justify-center text-center space-y-6 m-20">
         <Image
           src="/rust_lgo_720.png"
           alt="Rust Logo"
