@@ -45,7 +45,7 @@ const Card: FC<CardProps> = ({ item, key }) => {
             alt={item.name ?? item.title ?? ""}
             width={75}
             height={75}
-            className="rounded-md min-w-20  h-20 p-2 object-contain"
+            className="rounded-md min-w-20  h-30 p-2 object-contain"
           />
           <div className="grid gap-2 text-left">
             <h3 className="text-xl font-semibold text-current dark:text-white">

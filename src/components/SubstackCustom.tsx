@@ -64,7 +64,7 @@ export default function SubstackCustom() {
     <div className="w-full max-w-md mx-auto my-8">
       <form
         onSubmit={handleSubmit}
-        className={`flex flex-col items-center ${isLoading ? "form-glow" : ""}`}
+        className={`flex flex-col  items-center ${isLoading ? "form-glow" : ""}`}
       >
         <label
           htmlFor="email"
@@ -72,7 +72,7 @@ export default function SubstackCustom() {
         >
           Join 2400+ Rust Devs. Subscribe to get exclusive stuff
         </label>
-        <div className="flex w-full group">
+        <div className="flex w-full   justify-center group">
           <input
             type="email"
             id="email"
