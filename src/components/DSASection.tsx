@@ -1,15 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
-import { dsas, DSA } from "@/data/dsa";
-import Link from "next/link";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import { useState } from "react";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaCopy } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import Link from "next/link";
+
+import { dsas, DSA } from "@/data/dsa";
+
 const DSAToolSection: React.FC = () => {
   const [selectedTool, setSelectedTool] = useState<DSA | null>(null);
-  const [copySuccess, setCopySuccess] = useState("");
+  const [copySuccess, setCopySuccess] = useState<string>("");
 
   const handleOpenModal = (tool: DSA) => {
     setSelectedTool(tool);
@@ -23,7 +25,7 @@ const DSAToolSection: React.FC = () => {
   const handleCopyCode = async () => {
     if (selectedTool) {
       try {
-        await navigator.clipboard.writeText(selectedTool.snippet);
+        await navigator.clipboard.writeText(selectedTool.snippet);        
         setCopySuccess("Code copied!");
       } catch (err) {
         setCopySuccess("Failed to copy!");

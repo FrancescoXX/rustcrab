@@ -5,6 +5,7 @@ import Link from "next/link"
 export default function Footer() {
   const today = new Date()
   const currentYear = today.getFullYear()
+  
   return (
     <footer className="flex flex-col items-center justify-center space-y-4 p-4 border-t-2 bg-white dark:bg-black">
       <div className="flex justify-center space-x-6">

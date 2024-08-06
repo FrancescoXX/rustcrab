@@ -1,6 +1,3 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { projects } from "@/data/projects";
 import Card from "./Card";
 

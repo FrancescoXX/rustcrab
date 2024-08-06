@@ -1,24 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, Search } from "lucide-react";
-import { books } from "@/data/books";
+import { useState } from "react";
+import { Search } from "lucide-react";
+
+import { Book, books } from "@/data/books";
 import Card from "@/components/Card";
 
 export default function Books() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredBooks, setFilteredBooks] = useState(books);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [filteredBooks, setFilteredBooks] = useState<Book[]>(books);
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value.toLowerCase();
-    setSearchTerm(term);
+
     const filtered = books.filter(
       (book) =>
         book.title.toLowerCase().includes(term) ||
-        book.description.toLowerCase().includes(term),
+        book.description.toLowerCase().includes(term)
     );
+    
+    setSearchTerm(term);
     setFilteredBooks(filtered);
   };
 

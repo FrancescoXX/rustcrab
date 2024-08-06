@@ -1,20 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import { useState } from "react";
 import { ArrowRight, Search } from "lucide-react";
-import { lessons } from "@/data/lessons";
+import Link from "next/link";
+
+import { Lesson, lessons } from "@/data/lessons";
 
 export default function Lessons() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredLessons, setFilteredLessons] = useState(lessons);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [filteredLessons, setFilteredLessons] = useState<Lesson[]>(lessons);
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value.toLowerCase();
-    setSearchTerm(term);
+
     const filtered = lessons.filter((lessons) =>
       lessons.title.toLowerCase().includes(term),
     );
+    
+    setSearchTerm(term);
     setFilteredLessons(filtered);
   };
 

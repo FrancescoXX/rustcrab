@@ -1,10 +1,10 @@
 "use client";
 
+import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 import { people } from "@/data/people";
-import { FaGithub } from "react-icons/fa";
-import Link from "next/link";
 
 export default function PeopleSection() {
   return (

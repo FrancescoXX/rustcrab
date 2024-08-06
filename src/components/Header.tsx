@@ -2,14 +2,26 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
 import Image from "next/image";
-import Navbar from "./navbar/Navbar";
-import MobileNav from "./navbar/MobileNav";
 import Link from "next/link";
 
+import Navbar from "./navbar/Navbar";
+import MobileNav from "./navbar/MobileNav";
+
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [starsCount, setStarsCount] = useState<number | null>(null);
+
+  const toggleDarkMode = () => {
+    if (darkMode) {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+    }
+    setDarkMode(!darkMode);
+  };
 
   useEffect(() => {
     if (
@@ -39,17 +51,6 @@ export default function Header() {
       .catch((error) => console.error("Error fetching GitHub stars:", error));
   }, []);
 
-  const toggleDarkMode = () => {
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
-    }
-    setDarkMode(!darkMode);
-  };
-
   return (
     <header
       className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-2 0 z-40 ${
@@ -69,7 +70,7 @@ export default function Header() {
           Rustcrab
         </Link>
         <div className="hidden sm:block">
-          <Navbar  />
+          <Navbar />
         </div>
       </div>
       <div className="flex items-center space-x-4">
