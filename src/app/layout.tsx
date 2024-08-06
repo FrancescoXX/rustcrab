@@ -17,6 +17,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <meta property="og:title" content="Rustcrab" />
+        <meta
+          property="og:description"
+          content="An Open source project with everything you need to learn about Rust."
+        />
+        <meta
+          property="og:image"
+          content="https://www.rustcrab.com/rust_lgo_720.png"
+        />
+        <meta property="og:url" content="https://www.rustcrab.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Rustcrab" />
+        <meta
+          name="twitter:description"
+          content="An Open source project with everything you need to learn about Rust"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.rustcrab.com/rust_lgo_720.png"
+        />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-J6GRE0TKHY"
