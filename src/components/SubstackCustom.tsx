@@ -70,7 +70,7 @@ export default function SubstackCustom() {
           htmlFor="email"
           className="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2"
         >
-          Join 2400+ Rust Devs. Subscribe to get exclusive stuff
+          Join 2600+ Rust Devs. Subscribe to get exclusive stuff
         </label>
         <div className="flex w-full   justify-center group">
           <input
