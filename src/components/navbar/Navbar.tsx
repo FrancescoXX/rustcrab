@@ -18,7 +18,7 @@ const menuItems = [
 
 const Navbar: React.FC = () => {
   return (
-    <ul className="flex space-x-4 small-medium:space-x-2 capitalize">
+    <ul className="flex space-x-4 small-medium:space-x-2 capitalize md:text-base text-base sm:text-sm">
       {menuItems.map((item, index) => (
         <Link href={item.link} key={index} className="cursor-pointer transition ease-in-out">
           <span className="hover:text-orange-500">{item.items}</span>
