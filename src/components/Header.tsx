@@ -12,18 +12,12 @@ export default function Header() {
   const [starsCount, setStarsCount] = useState<number | null>(null);
 
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
+    if (localStorage.theme === "dark") {
       setDarkMode(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setDarkMode(false);
     }
+  }, []);
 
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
@@ -52,7 +46,7 @@ export default function Header() {
 
   return (
     <header
-      className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-2 0 z-40 ${
+      className={`flex justify-between items-center md:p-4 p-4 space-x-4 sticky top-0 border-b-2 0 z-40 sm:pl-0 ${
         isScrolled
           ? "backdrop-blur-md bg-opacity-70 bg-transparent"
           : "bg-white dark:bg-black"
@@ -64,7 +58,7 @@ export default function Header() {
         </div>
         <Link
           href="/"
-          className="text-2xl font-bold cursor-pointer hidden sm:block"
+          className="text-2xl md:text-2xl font-bold cursor-pointer hidden sm:block sm:text-base"
         >
           Rustcrab
         </Link>
