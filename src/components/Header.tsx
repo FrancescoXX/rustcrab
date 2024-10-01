@@ -46,7 +46,7 @@ export default function Header() {
 
   return (
     <header
-      className={`flex justify-between items-center p-4 space-x-4 sticky top-0 border-b-2 0 z-40 ${
+      className={`flex justify-between items-center md:p-4 p-4 space-x-4 sticky top-0 border-b-2 0 z-40 sm:pl-0 ${
         isScrolled
           ? "backdrop-blur-md bg-opacity-70 bg-transparent"
           : "bg-white dark:bg-black"
@@ -58,7 +58,7 @@ export default function Header() {
         </div>
         <Link
           href="/"
-          className="text-2xl font-bold cursor-pointer hidden sm:block"
+          className="text-2xl md:text-2xl font-bold cursor-pointer hidden sm:block sm:text-base"
         >
           Rustcrab
         </Link>
