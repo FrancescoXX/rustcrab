@@ -6,7 +6,6 @@ import DevToolsSection from "../components/DevToolsSection";
 import ProjectsSection from "../components/ProjectsSection";
 import SubstackCustom from "../components/SubstackCustom";
 import DSAToolSection from "@/components/DSASection";
-import PeopleSection from "@/components/PeopleSection";
 import LessonSection from "@/components/LessonSection";
 
 export default function Home() {
@@ -56,9 +55,6 @@ export default function Home() {
       </div>
       <div id='lessons' className='min-h-dvh'>
         <LessonSection />
-      </div>
-      <div id='people' className='min-h-dvh'>
-        <PeopleSection />
       </div>
       <div id='dsas' className='min-h-dvh'>
         <DSAToolSection />

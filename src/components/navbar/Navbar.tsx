@@ -12,7 +12,6 @@ const menuItems = [
   { items: "Lessons", link: "/#lessons" },
   { items: "Dev Tools", link: "/#dev_tools" },
   { items: "DSA Example", link: "/#dsas" },
-  { items: "People", link: "/#people" },
 ];
 
 
