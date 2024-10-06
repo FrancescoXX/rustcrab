@@ -130,4 +130,10 @@ export const lessons: Array<Lesson> = [
     link: "https://youtu.be/sLjOV8kYxfE?si=TF82XSnCgWDZ0qOR",
     embed: "https://www.youtube.com/embed/sLjOV8kYxfE?si=TF82XSnCgWDZ0qOR",
   },
+  {
+    title: "Understanding Traits in Rust: A Comprehensive Guide",
+    link: "https://youtu.be/w8lmMaKY3Hs?si=urqKuLhmn4tKCETO",
+    embed: "https://www.youtube.com/embed/w8lmMaKY3Hs",
+  },
+  
 ];
