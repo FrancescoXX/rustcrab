@@ -15,7 +15,6 @@ export const menuItems: menuObject[] = [
   { items: 'Projects', link: '/#projects' },
   { items: 'Dev Tools', link: '/#dev_tools' },
   { items: 'Lesson', link: '/#lessons' },
-  { items: 'People', link: '/#people' },
   { items: 'DSA', link: '/#dsas' }
 ];
 
