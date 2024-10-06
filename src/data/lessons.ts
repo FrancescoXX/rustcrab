@@ -6,7 +6,6 @@ export interface Lesson {
 
 export const lessons: Array<Lesson> = [
   {
-    id: 1,
     title: "Rust Installation and hello world",
     link: " https://youtu.be/R33h77nrMqc?si=CEVl9W3IOoWnMjtq",
     embed: "https://www.youtube.com/embed/R33h77nrMqc?si=CEVl9W3IOoWnMjtq",
