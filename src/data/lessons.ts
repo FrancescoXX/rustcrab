@@ -137,8 +137,8 @@ export const lessons: Array<Lesson> = [
   },
   {
     title: "Rust Lifetimes Explained Tutorial",
-    link: "https://youtu.be/S-SkEA4QWWE?si=u5q_9HUR6afU2P07",
-    embed: "https://www.youtube.com/embed/SkEA4QWWE",
+    link: "https://youtu.be/S-SkEA4QWWE",
+    embed: "https://www.youtube.com/embed/S-SkEA4QWWE",
   },
   
 ];
