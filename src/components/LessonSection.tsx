@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import { lessons } from "@/data/lessons";
-import { ArrowRight } from "lucide-react";
+import React from 'react';
+import Link from 'next/link';
+import { lessons } from '@/data/lessons';
+import { ArrowRight } from 'lucide-react';
 
 export default function LessonSection() {
   return (
@@ -16,12 +16,11 @@ export default function LessonSection() {
               target="_blank"
               href={lesson.link}
               key={index}
-              className="dark:bg-gray-900 bg-gray-200 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
+              className="dark:bg-gray-900 bg-gray-200 pb-12 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-full overflow-hidden h-0 pb-[56.25%] rounded-lg">
                   <iframe
-
                     src={lesson.embed}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
@@ -29,7 +28,7 @@ export default function LessonSection() {
                     className="absolute top-0 left-0 w-full h-full rounded-lg"
                   ></iframe>
                 </div>
-                <h3 className="text-2xl mt-4 font-semibold mb-3 text-current">
+                <h3 className="text-2xl mt-4 font-semibold mb-3 text-current px-2">
                   {lesson.title}
                 </h3>
                 <span className="text-red-500 hover:text-red-600 font-medium flex items-center gap-1">
