@@ -24,7 +24,7 @@ export default function Footer() {
           <FaYoutube />
         </Link>
         <Link
-          href="https://discord.gg/4c-784142072763383858"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
           className="text-2xl text-black dark:text-white hover:text-indigo-600 hover:scale-125 transform transition duration-400"
