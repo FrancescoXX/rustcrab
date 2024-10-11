@@ -32,6 +32,7 @@ const Card: FC<CardProps> = ({ item, key }) => {
   }, []);
 
   return (
+    
     <Link
       target="_blank"
       href={item.link}
@@ -40,6 +41,7 @@ const Card: FC<CardProps> = ({ item, key }) => {
     >
       <div className="flex items-center gap-5 sm:gap-10 relative hover:scale-105 p-6 px-10 transition duration-300">
         <div className="flex flex-col md:flex-col gap-5 items-start w-full">
+<<<<<<< HEAD
           <Image
             src={item.icon ?? item.cover ?? ""}
             alt={item.name ?? item.title ?? ""}
@@ -54,11 +56,30 @@ const Card: FC<CardProps> = ({ item, key }) => {
             <p className="dark:text-gray-400 text-gray-600 mb-4">
               {item.description}
             </p>
+=======
+           <div className="md:flex flex-col">
+            <Image
+              src={item.icon ?? item.cover ?? ""}
+              alt={item.name ?? item.title ?? ""}
+              width={75}
+              height={75}
+              className="rounded-md min-w-20  h-30 p-2 object-contain"
+            />
+            <div className="grid gap-2 text-left text-wrap">
+              <h3 className="text-xl font-semibold text-current dark:text-white">
+                {item.name ?? item.title}
+              </h3>
+              <p className="dark:text-gray-400 text-gray-600 mb-4">
+                {item.description}
+              </p>
+            </div>
+>>>>>>> d5fbeebc33c2695b5583c5306a3b04a8f7f1f7b9
           </div>
         </div>
         <FaArrowRight className="dark:text-white opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition duration-300" />
       </div>
     </Link>
+    
   );
 };
 

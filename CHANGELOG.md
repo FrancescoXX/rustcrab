@@ -1,4 +1,13 @@
-# 0.2.0 (2024-08-30)
+## [0.2.1](https://github.com/FrancescoXX/rustcrab/compare/v0.2.0...v0.2.1) (2024-10-01)
+
+
+### Bug Fixes
+
+* [#157](https://github.com/FrancescoXX/rustcrab/issues/157) ([#158](https://github.com/FrancescoXX/rustcrab/issues/158)) ([d951365](https://github.com/FrancescoXX/rustcrab/commit/d9513656f3e903f581d2ae323fc1244f1e60d9dd))
+
+
+
+# [0.2.0](https://github.com/FrancescoXX/rustcrab/compare/f72bc7bec3740e3fdc462a456d84a04320606345...v0.2.0) (2024-08-30)
 
 
 ### Bug Fixes
