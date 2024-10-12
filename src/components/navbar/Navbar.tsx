@@ -7,12 +7,12 @@ interface MenuObject {
 }
 
 const menuItems = [
-  { items: "Books", link: "/#books" },
+  { items: "Books", link: "/books" },
   { items: "Projects", link: "/#projects" },
-  { items: "Lessons", link: "/#lessons" },
-  { items: "Dev Tools", link: "/#dev_tools" },
-  { items: "DSA Example", link: "/#dsas" },
-  { items: "Blockchains", link: "/#blockchains" },
+  { items: "Lessons", link: "/lessons" },
+  { items: "Dev Tools", link: "/devtools" },
+  { items: "DSA Example", link: "/dsas" },
+  { items: "Blockchains", link: "/blockchain" },
 ];
 
 
