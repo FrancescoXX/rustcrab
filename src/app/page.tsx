@@ -7,6 +7,7 @@ import ProjectsSection from "../components/ProjectsSection";
 import SubstackCustom from "../components/SubstackCustom";
 import DSAToolSection from "@/components/DSASection";
 import LessonSection from "@/components/LessonSection";
+import BlockchainSection from "@/components/BlockchainSection";
 
 export default function Home() {
   return (
@@ -58,6 +59,9 @@ export default function Home() {
       </div>
       <div id='dsas' className='min-h-dvh'>
         <DSAToolSection />
+      </div>
+      <div id='blockchains' className='min-h-dvh'>
+        <BlockchainSection />
       </div>
       <div id='projects' className='min-h-dvh'>
         <ProjectsSection />
