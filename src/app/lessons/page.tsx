@@ -19,11 +19,15 @@ export default function Lessons() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-background bg-opacity-5">
+       <div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[550px] -top-96 left-1/2 transform -translate-x-1/2"></div>
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
-          Rust Lessons
+        <div className="m-8">
+        <h1 className="text-6xl font-semibold text-center text-foreground mt-8">
+          RUST <span className="bg-gradient-to-r from-[#F5742E]/90 to-[#D93A29] bg-clip-text text-transparent">LESSONS</span>
         </h1>
+        <h6 className="text-foreground/90 font-light text-base text-center ">Everything you need to learn about Rust</h6>
+        </div>
 
         <div className="mb-8 max-w-md mx-auto">
           <div className="relative">
@@ -32,10 +36,10 @@ export default function Lessons() {
               placeholder="Search lessons..."
               value={searchTerm}
               onChange={handleSearch}
-              className="w-full p-3 pl-10 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full p-3 pl-10 rounded-full border border-gray-300 dark:border-gray-700   text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
             />
             <Search
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 "
               size={20}
             />
           </div>

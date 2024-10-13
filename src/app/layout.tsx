@@ -5,6 +5,7 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -73,10 +74,14 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${inter.className} ${roboto.className} bg-white dark:bg-black min-h-screen text-black dark:text-white `}>
+      <body className={`${inter.className} ${roboto.className} bg-background min-h-screen text-black dark:text-white `}>
+        <ThemeProvider
+        defaultTheme="system"
+        >
         <Header />
         {children}
         <Footer />
+        </ThemeProvider>
       </body>
       <CookieConsent />
     </html>
