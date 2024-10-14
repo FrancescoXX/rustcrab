@@ -24,7 +24,7 @@ const components: {
 }[] = [
   {
     title: "Rspack",
-    image: "/logos/rspack.svg",
+    image: "/logos/rspack.png",
     href: "https://www.rspack.dev/",
     description:
       "A fast Rust-Based web bundler that aims to ve a drop-in replacement for webpack.",
@@ -38,14 +38,14 @@ const components: {
   },
   {
     title: "Helix Editor",
-    image: "/logos/helix.svg",
+    image: "/logos/helixs.png",
     href: "https://helix-editor.com/",
     description:
       "A post-modern modal text editor lightweight and keyoard-centric. Built with Rust.",
   },
   {
     title: "Actix Web",
-    image: "/logos/actix.png",
+    image: "/logos/actixweb.png",
     href: "https://actix.rs/",
     description: "Visually or semantically separates content.",
   },
@@ -63,7 +63,7 @@ export default function NavigationMenuDemo() {
     <NavigationMenu className="font-normal">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/#books" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Books
             </NavigationMenuLink>
@@ -101,11 +101,11 @@ export default function NavigationMenuDemo() {
               <ListItem href="/docs" title="Block Chain">
                 Learn how to build a blockchain from scratch
               </ListItem>
-              <ListItem href="/docs/installation" title="Web Devlopment">
+              <ListItem href="/docs" title="Web Devlopment">
                 Learn how to build a website from scratch
               </ListItem>
               <ListItem
-                href="/docs/primitives/typography"
+                href="/docs"
                 title="System Programming"
               >
                 Learn the fundamentals of system programming, including memory
@@ -127,7 +127,7 @@ export default function NavigationMenuDemo() {
                   title={component.title}
                   href={component.href}
                 >
-                  {component.description}
+                  {/* {component.description} */}
                 </ListItem>
               ))}
             </ul>

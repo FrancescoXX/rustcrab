@@ -7,11 +7,11 @@ import ProjectsSection from "../components/ProjectsSection";
 import SubstackCustom from "../components/SubstackCustom";
 import DSAToolSection from "@/components/DSASection";
 import LessonSection from "@/components/LessonSection";
+import { UserProfile } from "@clerk/nextjs";
 
 export default function Home() {
   return (
     <main className="relative flex-grow flex flex-col items-center extra-small:text-[0.75em] small:text-[1rem] justify-center text-center space-y-6 bg-background bg-opacity-5">
-      <div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[550px] -top-96 left-1/2 transform -translate-x-1/2"></div>
       <div className="flex flex-col items-center justify-center text-center space-y-6 m-20 ">
         <Image
           src="/rust_lgo_720.png"
@@ -20,7 +20,6 @@ export default function Home() {
           height={100}
           className="mx-auto mt-20"
         />
-        
         <h1 className="text-5xl font-bold flex items-center space-x-2">
           <a
             href="https://github.com/FrancescoXX/rustcrab"

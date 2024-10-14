@@ -1,16 +1,18 @@
 "use client"; // This directive marks the component as a Client Component
 import { useState, useEffect } from "react";
-import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
-import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+
 import Navbar from "./navbar/Navbar";
 import MobileNav from "./navbar/MobileNav";
 import Link from "next/link";
 import DarkModeToggle from "./navbar/DarkModeToggle";
 import { Button } from "./ui/button";
+import { SignOutButton, UserButton, useUser } from '@clerk/nextjs';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [starsCount, setStarsCount] = useState<number | null>(null);
+  const { isSignedIn } = useUser();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +31,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="flex justify-around items-center md:p-4 p-4 space-x-4 sticky  h-24 top-0 border-b-2 border-b-foreground/10 0 z-40 sm:pl-0 bg-foreground/5 backdrop-blur-5">
+    <header className="flex justify-around items-center md:p-4 p-4 space-x-4 h-24 top-0 border-b-2 border-b-foreground/10 0 z-40 sm:pl-0 bg-foreground/5 backdrop-blur-5 ">
       <div>
       <Link
           href="/"
@@ -47,6 +49,7 @@ export default function Header() {
         </div>
       </div>
       <div className="flex justify-between items-center p-4">
+        {/* I am shifiting this daily.dev to the blog button */}
         {/* <a
           href="https://dly.to/vRJ9aTACP65"
           target="_blank"
@@ -68,7 +71,7 @@ export default function Header() {
           className="flex items-center space-x-2 text-2xl text-foreground"
           title="GitHub repository"
         >
-          <FaGithub />
+          <FaGithub className="w-7 h-7" />
           {starsCount !== null && (
             <span className="text-xl flex items-center">
               {starsCount}
@@ -80,12 +83,42 @@ export default function Header() {
         </a>
 
         <DarkModeToggle />
+        {isSignedIn ? (
+            <UserButton 
+              appearance={{
+                elements: {
+                  userButtonAvatarBox: {
+                    width: '2.75rem',
+                    height: '2.75rem',
+                    borderRadius: '100%',
+                    boxShadow: '0px 0px 10px #F5742E',
+                    border: '1px solid #D93A29',
+                    shimmer: 'false',
+                  },
+                },
+              }}
+            />
+          ) : (
+        <>   
+        <Link href="/sign-in" passHref>
         <Button
           variant="default"
-          className=" rounded-full bg-gradient-to-r from-[#F5742E] to-[#D93A29] h-11 w-full sm:w-auto text-base font-semibold"
+          className=" rounded-full bg-gradient-to-r from-[#F5742E] to-[#D93A29]  h-11 w-full sm:w-auto text-base font-semibold"
         >
           Log In
         </Button>
+        </Link>
+        <Link href="/sign-up" passHref>
+        {/* I don't want to give the signup button so that i comment this. */}
+        {/* <Button
+          variant="default"
+          className="rounded-full bg-gradient-to-r from-[#F5742E] to-[#D93A29] h-11 w-full sm:w-auto text-base font-semibold"
+        >
+          Sign Up
+        </Button> */}
+        </Link>
+        </> 
+          )}
       </div>
     </header>
   );

@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -26,6 +28,32 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
 })()`;
 
   return (
+    <ClerkProvider
+    appearance={{
+      baseTheme: dark,
+      variables: {
+        colorPrimary: 'rgba(245, 116, 46, 1)',
+        colorBackground: "rgba( 255, 255, 255, 0.105)",
+        colorText: 'rgba(133, 133, 131, 1)',
+        colorNeutral: 'rgba(133, 133, 131, 1)',
+        colorInputBackground: 'rgba(255, 255, 255, 0.1)',
+        colorInputText: 'rgba(133, 133, 131, 1)',
+      },
+      elements: {
+        formButtonPrimary: {
+          backgroundColor: 'rgba(245, 116, 46, 1)',
+          '&:hover, &:focus, &:active': {
+            backgroundColor: 'rgba(245, 116, 46, 1)',
+          },
+          'cl-manage-account-section': {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+      },
+        },
+      },
+    }}
+  >
+      
+    
     <html lang="en">
       <head>
       <script
@@ -74,16 +102,21 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${inter.className} ${roboto.className} bg-background min-h-screen text-black dark:text-white `}>
-        <ThemeProvider
-        defaultTheme="system"
-        >
+      <body className={`${inter.className} ${roboto.className} bg-background min-h-screen text-foreground`}>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <Header />
+        <div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[600px] -top-64 left-1/2 transform -translate-x-1/2"></div>
         {children}
         <Footer />
         </ThemeProvider>
       </body>
       <CookieConsent />
     </html>
+    </ClerkProvider>
   );
 }

@@ -38,14 +38,14 @@ const DarkModeToggle = () => {
             darkMode ? "rotate-180 opacity-0" : "rotate-0 opacity-100"
           }`}
         >
-          <SunMoon className="text-black h-8 w-8 " />
+          <SunMoon className="text-black h-7 w-7 font-extralight" />
         </span>
         <span
           className={`absolute transition-transform duration-500 ease-in-out ${
             darkMode ? "rotate-0 opacity-100" : "-rotate-180 opacity-0"
           }`}
         >
-          <Sun className="text-white h-8 w-8" />
+          <Sun className="text-white h-7 w-7 font-extralight" />
         </span>
       </button>
     </div>
