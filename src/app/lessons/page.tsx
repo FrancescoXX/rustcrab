@@ -20,7 +20,6 @@ export default function Lessons() {
 
   return (
     <div className="min-h-screen bg-background bg-opacity-5">
-       <div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[550px] -top-96 left-1/2 transform -translate-x-1/2"></div>
       <div className="container mx-auto px-4 py-12">
         <div className="m-8">
         <h1 className="text-6xl font-semibold text-center text-foreground mt-8">
