@@ -8,6 +8,9 @@ import CookieConsent from "@/components/CookieConsent";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import { Pointer } from "@/components/cursor";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -53,7 +56,7 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
     }}
   >
       
-    
+   
     <html lang="en">
       <head>
       <script
@@ -103,6 +106,7 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${inter.className} ${roboto.className} bg-background min-h-screen text-foreground`}>
+      <Pointer>
       <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -112,8 +116,10 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
         <Header />
         <div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[600px] -top-64 left-1/2 transform -translate-x-1/2"></div>
         {children}
+        
         <Footer />
         </ThemeProvider>
+        </Pointer>
       </body>
       <CookieConsent />
     </html>

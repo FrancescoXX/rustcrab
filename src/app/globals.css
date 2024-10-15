@@ -6,6 +6,10 @@
   --rust-orange: #dd6b20; /* Define the rust-orange color */
 }
 
+* {
+  cursor: none; /* Hide the default cursor */
+}
+
 html {
   transition: background-color 0.3s, color 0.3s;
 }
