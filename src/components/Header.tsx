@@ -91,9 +91,6 @@ export default function Header() {
                     width: '2.75rem',
                     height: '2.75rem',
                     borderRadius: '100%',
-                    boxShadow: '0px 0px 10px #F5742E',
-                    border: '1px solid #D93A29',
-                    shimmer: 'false',
                   },
                 },
               }}

@@ -1,4 +1,3 @@
-// Core component that receives mouse positions and renders pointer and content
 'use client';
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -19,6 +18,21 @@ export const Pointer = ({
   const ref = React.useRef<HTMLDivElement>(null);
   const [rect, setRect] = useState<DOMRect | null>(null);
   const [isInside, setIsInside] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  // Detect mobile devices or screen widths below a certain threshold
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Mobile width threshold
+    };
+
+    handleResize(); // Set on initial load
+    window.addEventListener("resize", handleResize); // Update on resize
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (ref.current) {
@@ -27,13 +41,14 @@ export const Pointer = ({
   }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (rect) {
+    if (!isMobile && rect) { // Only move cursor if not mobile
       const scrollX = window.scrollX;
       const scrollY = window.scrollY;
       x.set(e.clientX - rect.left + scrollX);
       y.set(e.clientY - rect.top + scrollY);
     }
   };
+
   const handleMouseLeave = () => {
     setIsInside(false);
   };
@@ -48,13 +63,13 @@ export const Pointer = ({
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       style={{
-        cursor: "none",
+        cursor: isMobile ? "auto" : "none", // Default cursor for mobile, hide custom cursor
       }}
       ref={ref}
       className={cn("relative", className)}
     >
       <AnimatePresence>
-        {isInside && <FollowPointer x={x} y={y} title={title} />}
+        {!isMobile && isInside && <FollowPointer x={x} y={y} title={title} />}
       </AnimatePresence>
       {children}
     </div>
@@ -72,7 +87,7 @@ export const FollowPointer = ({
 }) => {
   return (
     <motion.div
-      className="h-16 w-16 rounded-full absolute z-50" // Updated size classes
+      className="h-16 w-16 rounded-full absolute z-50" // Adjusted size for larger cursor
       style={{
         top: y,
         left: x,
@@ -92,10 +107,10 @@ export const FollowPointer = ({
       }}
     >
       <Image
-        src="/icons/cursor.svg" // Ensure this path is correct in your public folder
+        src="/icons/cursor.svg" 
         alt="Custom Cursor"
-        width={32} // Updated width
-        height={32} // Updated height
+        width={32} 
+        height={32} 
       />
     </motion.div>
   );
