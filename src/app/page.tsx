@@ -11,14 +11,16 @@ import { UserProfile } from "@clerk/nextjs";
 
 export default function Home() {
   return (
-    <main className="relative flex-grow flex flex-col items-center extra-small:text-[0.75em] small:text-[1rem] justify-center text-center space-y-6 bg-background bg-opacity-5">
-      <div className="flex flex-col items-center justify-center text-center space-y-6 m-20 ">
+    <main className="relative flex-grow flex flex-col items-center extra-small:text-[0.75em] small:text-[1rem] justify-center text-center space-y-6 bg-background bg-opacity-5 w-full overflow-hidden">
+      
+      <div className="flex flex-col items-center justify-center text-center space-y-6 m-20">
+      <div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[500px] top-28 -right-48 transform translate-x-0"></div>
         <Image
           src="/rust_lgo_720.png"
           alt="Rust Logo"
-          width={100}
-          height={100}
-          className="mx-auto mt-20"
+          width={70}
+          height={70}
+          className="mx-auto mt-5"
         />
         <h1 className="text-5xl font-bold flex items-center space-x-2">
           <a
@@ -31,8 +33,9 @@ export default function Home() {
           </a>
         </h1>
         <br />
-        <p className="text-2xl md:text-3xl lg:text-4xl text-foreground/70">
-          An Open source project with everything you need to learn about Rust
+        <p className="text-5xl md:text-3xl lg:text-4xl text-foreground font-normal uppercase">
+          An Open source project with everything <br/> you need to 
+          <span className="bg-gradient-to-r from-[#F5742E] to-[#D93A29] bg-clip-text text-transparent"> learn about Rust</span>
         </p>
         <br />
         <div className="w-full max-w-md">

@@ -16,7 +16,7 @@ export default function LessonSection() {
               target="_blank"
               href={lesson.link}
               key={index}
-              className="dark:bg-gray-900 bg-gray-200 pb-12 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
+              className="bg-foreground/5 border-2 border-foreground/10 pb-12 rounded-3xl shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-full overflow-hidden h-0 pb-[56.25%] rounded-lg">
@@ -25,7 +25,7 @@ export default function LessonSection() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    className="absolute top-0 left-0 w-full h-full rounded-3xl p-4"
                   ></iframe>
                 </div>
                 <h3 className="text-2xl mt-4 font-semibold mb-3 text-current px-2">

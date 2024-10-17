@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Search } from "lucide-react";
 import { books } from "@/data/books";
 import Card from "@/components/Card";
@@ -23,20 +21,20 @@ export default function Books() {
   };
 
   return (
-    <div className="min-h-screen bg-background bg-opacity-5">
+    <div className="min-h-screen bg-background bg-opacity-5 mb-24">
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
-          Books to Learn Rust
+      <h1 className="text-6xl font-semibold text-center text-foreground mt-8 uppercase">
+          BOOKS TO LEARN <span className="bg-gradient-to-r from-[#F5742E]/90 to-[#D93A29] bg-clip-text text-transparent">RUST</span>
         </h1>
 
-        <div className="mb-8 max-w-md mx-auto">
+        <div className="mb-8 mt-16 max-w-md mx-auto">
           <div className="relative">
             <input
               type="text"
               placeholder="Search books..."
               value={searchTerm}
               onChange={handleSearch}
-              className="w-full p-3 pl-10 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full p-3 pl-10 rounded-full border border-foreground/20 bg-transparent dark:bg-gray-800 text-foreground/80 focus:outline-none focus:ring-2 focus:ring-primary/80"
             />
             <Search
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
@@ -52,7 +50,7 @@ export default function Books() {
         </div>
 
         {filteredBooks.length === 0 && (
-          <p className="text-center text-gray-600 dark:text-gray-400 mt-8">
+          <p className="text-center text-foreground/60 mt-8">
             No Books found matching your search.
           </p>
         )}
