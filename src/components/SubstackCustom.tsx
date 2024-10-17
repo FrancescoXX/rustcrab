@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
@@ -67,7 +67,6 @@ export default function SubstackCustom() {
 
   return (
     <div className="flex flex-col items-center md:items-start space-y-6 w-full max-w-md mx-auto my-8">
-      
       <form onSubmit={handleSubmit} className="w-full max-w-sm mx-auto">
         <div className="relative">
           <input
@@ -75,9 +74,10 @@ export default function SubstackCustom() {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-96 h-12 px-6 py-4 bg-background/50 border border-foreground/50 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300"
+            className="w-72 md:w-80 lg:w-96 h-12 px-6 py-4 bg-background/50 border border-foreground/50 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300"
             required
           />
+
           <Button
             type="submit"
             variant="default"
@@ -95,7 +95,9 @@ export default function SubstackCustom() {
         </div>
       </form>
       {message && (
-        <p className=" text-center text-green-500 font-sans text-xs">{message}</p>
+        <p className=" text-center text-green-500 font-sans text-xs">
+          {message}
+        </p>
       )}
     </div>
   );

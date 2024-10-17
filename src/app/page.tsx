@@ -7,7 +7,7 @@ import ProjectsSection from "../components/ProjectsSection";
 import SubstackCustom from "../components/SubstackCustom";
 import DSAToolSection from "@/components/DSASection";
 import LessonSection from "@/components/LessonSection";
-import { UserProfile } from "@clerk/nextjs";
+
 
 export default function Home() {
   return (

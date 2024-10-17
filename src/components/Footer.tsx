@@ -9,13 +9,6 @@ import { Button } from "./ui/button";
 import SubstackCustom from "./SubstackCustom";
 
 const Footer: React.FC = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Newsletter signup:", email);
-    setEmail("");
-  };
 
   return (
     <footer className="relative bg-gradient-to-b from-background to-background text-foreground overflow-hidden">
@@ -25,15 +18,15 @@ const Footer: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-grid-white/[0.02] bg-[size:50px_50px]" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto relative z-10">
         <div className="bg-foreground/5 backdrop-blur-xl rounded-3xl border-2 border-foreground/5 p-8 md:p-12">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-12 text-center md:text-left">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-24 md:gap-12 text-center md:text-left">
             {/* Social Links */}
             <div className="flex flex-col items-center md:items-center space-y-4">
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#F5742E]/80 via-[#FAD141]/80 to-[#D93A29]/80 bg-clip-text text-transparent">
                 Connect With Us
               </h3>
-              <div className="flex space-x-2 justify-center">
+              <div className="flex  justify-center">
                 <Link
                   href="https://x.com/FrancescoCiull4"
                   target="_blank"
@@ -71,7 +64,7 @@ const Footer: React.FC = () => {
                 </Link>
 
                 <Link
-                  href="https://discord.gg/4c-784142072763383858"
+                  href="https://discord.com/invite/cRjhjFRRre"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-background/50 rounded-full transition duration-300 hover:scale-110 group"

@@ -7,7 +7,7 @@ import MobileNav from "./navbar/MobileNav";
 import Link from "next/link";
 import DarkModeToggle from "./navbar/DarkModeToggle";
 import { Button } from "./ui/button";
-import { SignOutButton, UserButton, useUser } from '@clerk/nextjs';
+import { UserButton, useUser } from '@clerk/nextjs';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,22 +32,27 @@ export default function Header() {
 
   return (
     <header className="flex justify-around items-center md:p-4 p-4 space-x-4 h-24 top-0 border-b-2 border-b-foreground/10 0 z-40 sm:pl-0 bg-foreground/5 backdrop-blur-5 ">
-      <div>
-      <Link
-          href="/"
-          className="text-2xl md:text-2xl font-medium cursor-pointer hidden sm:block sm:text-base text-foreground"
-        >
-          Rustcrab
-        </Link>
-      </div>
-      <div className="flex items-center space-x-4">
-        <div className="flex items-center sm:hidden">
-          <MobileNav />
-        </div>
-        <div className="hidden sm:block">
-          <Navbar />
-        </div>
-      </div>
+     <div>
+  <Link
+    href="/"
+    className="text-2xl md:text-2xl font-medium cursor-pointer hidden md:block sm:text-base text-foreground"
+  >
+    Rustcrab
+  </Link>
+</div>
+
+<div className="flex items-center space-x-4">
+  {/* Show MobileNav for small (mobile) and medium (iPad) screens */}
+  <div className="flex items-center lg:hidden">
+    <MobileNav />
+  </div>
+
+  {/* Show Navbar for large screens (lg and above), hide on smaller screens */}
+  <div className="hidden lg:flex">
+    <Navbar />
+  </div>
+</div>
+
       <div className="flex justify-between items-center p-4">
         {/* I am shifiting this daily.dev to the blog button */}
         {/* <a
