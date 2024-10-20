@@ -74,7 +74,7 @@ export default function SubstackCustom() {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-72 md:w-80 lg:w-96 h-12 px-6 py-4 bg-background/50 border border-foreground/50 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300"
+            className="w-72 md:w-72 lg:w-96 h-12 px-6 py-4 bg-background/50 border border-foreground/50 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300"
             required
           />
 

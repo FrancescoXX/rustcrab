@@ -35,7 +35,7 @@ export default function Header() {
      <div>
   <Link
     href="/"
-    className="text-2xl md:text-2xl font-medium cursor-pointer hidden md:block sm:text-base text-foreground"
+    className="text-2xl md:text-4xl font-medium cursor-pointer hidden md:block sm:text-base text-foreground"
   >
     Rustcrab
   </Link>
