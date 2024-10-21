@@ -37,9 +37,9 @@ const Card: FC<CardProps> = ({ item, key }) => {
       target="_blank"
       href={item.link}
       key={key}
-      className="dark:bg-gray-900 group bg-gray-200 rounded-lg shadow-lg transition duration-300 hover:shadow-xl min-w-full toolsInnerCard"
+      className="bg-foreground/5 border-2 border-foreground/10 rounded-3xl shadow-lg transition duration-300 hover:shadow-xl min-w-full toolsInnerCard"
     >
-      <div className="flex items-center gap-5 sm:gap-10 relative hover:scale-105 p-6 px-10 transition duration-300">
+      <div className="group flex items-center gap-5 sm:gap-10 relative hover:scale-105 p-6 px-10 transition duration-300">
         <div className="flex flex-col md:flex-col gap-5 items-start w-full">
            <div className="md:flex flex-col">
             <Image
@@ -50,16 +50,16 @@ const Card: FC<CardProps> = ({ item, key }) => {
               className="rounded-md min-w-20  h-30 p-2 object-contain"
             />
             <div className="grid gap-2 text-left text-wrap">
-              <h3 className="text-xl font-semibold text-current dark:text-white">
+              <h3 className="text-xl font-semibold text-current ">
                 {item.name ?? item.title}
               </h3>
-              <p className="dark:text-gray-400 text-gray-600 mb-4">
+              <p className=" text-accent-foreground/70 mb-4">
                 {item.description}
               </p>
             </div>
           </div>
         </div>
-        <FaArrowRight className="dark:text-white opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition duration-300" />
+        <FaArrowRight className="text-foreground/40 opacity-0 group-hover:opacity-100 transform -translate-x-10 group-hover:translate-x-0 transition duration-300" />
       </div>
     </Link>
     

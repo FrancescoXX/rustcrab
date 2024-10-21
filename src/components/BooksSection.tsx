@@ -9,7 +9,7 @@ export default function BooksSection() {
       <h2 className="text-4xl font-bold mb-8 text-center text-current">
       Books to Learn Rust
       </h2>
-        <div className="grid md:grid-cols-2 w-full gap-5">
+        <div className="grid md:grid-cols-2 w-full gap-5 ">
           {books.slice(0, 3).map((book, index) => (
             <Card item={book} key={index} />
           ))}

@@ -7,18 +7,22 @@ import ProjectsSection from "../components/ProjectsSection";
 import SubstackCustom from "../components/SubstackCustom";
 import DSAToolSection from "@/components/DSASection";
 import LessonSection from "@/components/LessonSection";
+import Header from "@/components/Header";
+
 
 export default function Home() {
   return (
-    <main className="flex-grow flex flex-col items-center extra-small:text-[0.75em] small:text-[1rem] justify-center text-center space-y-6">
+    <><Header /><div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[600px] -top-64 left-1/2 transform -translate-x-1/2"></div>
+    <main className="relative flex-grow flex flex-col items-center extra-small:text-[0.75em] small:text-[1rem] justify-center text-center space-y-6 bg-background bg-opacity-5 w-full overflow-hidden">
+
       <div className="flex flex-col items-center justify-center text-center space-y-6 m-20">
+        <div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[500px] top-28 -right-48 transform translate-x-0"></div>
         <Image
           src="/rust_lgo_720.png"
           alt="Rust Logo"
-          width={100}
-          height={100}
-          className="mx-auto"
-        />
+          width={70}
+          height={70}
+          className="mx-auto mt-5" />
         <h1 className="text-5xl font-bold flex items-center space-x-2">
           <a
             href="https://github.com/FrancescoXX/rustcrab"
@@ -30,11 +34,12 @@ export default function Home() {
           </a>
         </h1>
         <br />
-        <p className="text-2xl md:text-3xl lg:text-4xl text-current">
-          An Open source project with everything you need to learn about Rust
+        <p className="text-5xl md:text-3xl lg:text-4xl text-foreground font-normal uppercase mb-6">
+          An Open source project with everything <br /> you need to
+          <span className="bg-gradient-to-r from-[#F5742E] to-[#D93A29] bg-clip-text text-transparent"> learn about Rust</span>
         </p>
         <br />
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md ">
           <SubstackCustom />
         </div>
         <br />
@@ -62,6 +67,6 @@ export default function Home() {
       <div id='projects' className='min-h-dvh'>
         <ProjectsSection />
       </div>
-    </main>
+    </main></>
   );
 }

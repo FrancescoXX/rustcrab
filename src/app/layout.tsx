@@ -5,6 +5,12 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import { Pointer } from "@/components/cursor";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -14,24 +20,37 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const initDarkModeDetection = `
-(function () {
-const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const themeChosen = localStorage.theme;
-if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
-  document.documentElement.classList.add("dark");
-  localStorage.theme = 'dark';
-}
-})()`;
+ 
 
   return (
+    <ClerkProvider
+    appearance={{
+      baseTheme: dark,
+      variables: {
+        colorPrimary: 'rgba(245, 116, 46, 1)',
+        colorBackground: "rgba( 255, 255, 255, 0.105)",
+        colorText: 'rgba(133, 133, 131, 1)',
+        colorNeutral: 'rgba(133, 133, 131, 1)',
+        colorInputBackground: 'rgba(255, 255, 255, 0.1)',
+        colorInputText: 'rgba(133, 133, 131, 1)',
+      },
+      elements: {
+        formButtonPrimary: {
+          backgroundColor: 'rgba(245, 116, 46, 1)',
+          '&:hover, &:focus, &:active': {
+            backgroundColor: 'rgba(245, 116, 46, 1)',
+          },
+          'cl-manage-account-section': {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+      },
+        },
+      },
+    }}
+  >
+      
+   
     <html lang="en">
-      <head>
-      <script
-          type="application/javascript"
-          id="dark-mode-detection"
-          dangerouslySetInnerHTML={{ __html: initDarkModeDetection }}
-        ></script>        
+      <head>    
       <meta property="og:title" content="Rustcrab" />
         <meta
           property="og:description"
@@ -73,12 +92,23 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${inter.className} ${roboto.className} bg-white dark:bg-black min-h-screen text-black dark:text-white `}>
-        <Header />
+      <body className={`${inter.className} ${roboto.className} bg-background min-h-screen text-foreground`}>
+      <Pointer>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+      
         {children}
+        
         <Footer />
+        </ThemeProvider>
+        </Pointer>
       </body>
       <CookieConsent />
     </html>
+    </ClerkProvider>
   );
 }
