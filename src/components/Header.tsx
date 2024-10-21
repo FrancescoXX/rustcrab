@@ -33,15 +33,16 @@ export default function Header() {
   return (
     <header className="flex justify-around items-center md:p-4 p-4  h-24 top-0 border-b-2 border-b-foreground/10  z-40 sm:pl-0 bg-foreground/5 backdrop-blur-5 ">
      <div>
-  <Link
-    href="/"
-    className="text-2xl md:text-4xl font-medium cursor-pointer hidden md:block sm:text-base text-foreground"
-  >
-    Rustcrab
-  </Link>
+     <Link
+  href="/"
+  className="text-2xl md:text-4xl font-medium cursor-pointer hidden md:block sm:text-base text-foreground"
+>
+  Rustcrab
+</Link>
+
 </div>
 
-<div className="flex items-center space-x-4">
+<div className="flex items-center md:space-x-4">
   {/* Show MobileNav for small (mobile) and medium (iPad) screens */}
   <div className="flex items-center lg:hidden">
     <MobileNav />

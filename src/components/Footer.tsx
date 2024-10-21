@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-background text-muted-foreground py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start ">
           {/* Social Links */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-center">
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#F5742E]/80 via-[#FAD141]/80 to-[#D93A29]/80 bg-clip-text text-transparent">
               Connect With Us
             </h3>
-            <div className="flex justify-center md:justify-start ">
+            <div className="flex justify-center  ">
               <SocialLink
                 href="https://x.com/FrancescoCiull4"
                 icon={<FaXTwitter className="text-muted-foreground group-hover:text-primary" size={28} />}
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Support Button */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-center">
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#F5742E]/80 via-[#FAD141]/80 to-[#D93A29]/80 bg-clip-text text-transparent">
               Support Our Project
             </h3>
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-center">
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#F5742E]/80 via-[#FAD141]/80 to-[#D93A29]/80 bg-clip-text text-transparent">
               Stay Updated
             </h3>
