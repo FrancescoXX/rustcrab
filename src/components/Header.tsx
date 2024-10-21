@@ -31,7 +31,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="flex justify-around items-center md:p-4 p-4 space-x-4 h-24 top-0 border-b-2 border-b-foreground/10 0 z-40 sm:pl-0 bg-foreground/5 backdrop-blur-5 ">
+    <header className="flex justify-around items-center md:p-4 p-4  h-24 top-0 border-b-2 border-b-foreground/10  z-40 sm:pl-0 bg-foreground/5 backdrop-blur-5 ">
      <div>
   <Link
     href="/"

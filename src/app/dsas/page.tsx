@@ -7,6 +7,7 @@ import { FaCopy } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import Header from "@/components/Header";
 
 const DSAPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -46,9 +47,10 @@ const DSAPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-backgroun bg-opacity-5 mb-24">
+
+    <><Header /><div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[600px] -top-64 left-1/2 transform -translate-x-1/2"></div><div className="min-h-screen bg-backgroun bg-opacity-5 mb-24">
       <div className="container mx-auto px-4 py-12">
-      <h1 className="text-6xl font-semibold text-center text-foreground mt-8 uppercase">
+        <h1 className="text-6xl font-semibold text-center text-foreground mt-8 uppercase">
           Data sturctures in <span className="bg-gradient-to-r from-[#F5742E]/90 to-[#D93A29] bg-clip-text text-transparent">RUST</span>
         </h1>
 
@@ -59,12 +61,10 @@ const DSAPage: React.FC = () => {
               placeholder="Search data structures..."
               value={searchTerm}
               onChange={handleSearch}
-              className="w-full p-3 pl-14 rounded-full border border-foreground/40 bg-transparent text-foreground/80 focus:outline-none focus:ring-2 focus:ring-red-500 placeholder:text-muted-foreground/80" 
-            />
+              className="w-full p-3 pl-14 rounded-full border border-foreground/40 bg-transparent text-foreground/80 focus:outline-none focus:ring-2 focus:ring-red-500 placeholder:text-muted-foreground/80" />
             <Search
               className="absolute left-6 top-1/2 transform -translate-y-1/2 text-muted-foreground/80"
-              size={20}
-            />
+              size={20} />
           </div>
         </div>
 
@@ -139,7 +139,7 @@ const DSAPage: React.FC = () => {
           </div>
         </div>
       )}
-    </div>
+    </div></>
   );
 };
 

@@ -100,8 +100,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-        <Header />
-        <div className="absolute w-[262px] h-[262px] bg-gradient-to-r from-[#f5742e] to-[#d93a29] rounded-full blur-[600px] -top-64 left-1/2 transform -translate-x-1/2"></div>
+      
         {children}
         
         <Footer />

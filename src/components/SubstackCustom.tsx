@@ -1,7 +1,9 @@
+'use client';
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
+import Spinner from "./ui/spinner";
 
 export default function SubstackCustom() {
   const [email, setEmail] = useState("");
@@ -66,28 +68,28 @@ export default function SubstackCustom() {
   };
 
   return (
-    <div className="flex flex-col items-center md:items-start space-y-6 w-full max-w-md mx-auto my-8">
-      <form onSubmit={handleSubmit} className="w-full max-w-sm mx-auto">
+    <div className="flex flex-col items-center space-y-6 w-full max-w-lg mx-auto  px-4 md:px-0">
+      <form onSubmit={handleSubmit} className="w-full">
         <div className="relative">
           <input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-72 md:w-72 lg:w-96 h-12 px-6 py-4 bg-background/50 border border-foreground/50 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300"
+            className="w-full h-12 px-6 py-4 bg-background/50 border-[0.5px] border-muted-foreground/70 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300 placeholder:text-muted-foreground/80"
             required
           />
 
           <Button
             type="submit"
             variant="default"
-            className="absolute h-10 right-1 top-1 bottom-1 px-6 bg-gradient-to-r from-[#F5742E] to-[#D93A29] text-white rounded-full hover:opacity-90 transition duration-300 flex items-center justify-center"
+            className="absolute  h-10 right-1 top-1 bottom-1 px-5 bg-gradient-to-r from-[#F5742E] to-[#D93A29] text-white rounded-full hover:opacity-90 transition duration-300 flex items-center justify-center"
             disabled={isLoading || isSubscribed}
           >
             {isSubscribed ? (
               <FaCheck />
             ) : isLoading ? (
-              <span className="animate-spin">↻</span>
+              <Spinner />
             ) : (
               "Subscribe"
             )}
@@ -95,7 +97,7 @@ export default function SubstackCustom() {
         </div>
       </form>
       {message && (
-        <p className=" text-center text-green-500 font-sans text-xs">
+        <p className="text-center text-green-500 font-sans text-sm md:text-base">
           {message}
         </p>
       )}
