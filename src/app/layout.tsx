@@ -1,4 +1,4 @@
-import { Inter, Roboto } from "next/font/google";
+import {Bricolage_Grotesque, Montserrat } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
 import Script from "next/script";
@@ -6,9 +6,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 
-const inter = Inter({ subsets: ["latin"] });
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -73,7 +76,7 @@ if ((!themeChosen && isDarkModePreferred) || themeChosen === "dark") {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${inter.className} ${roboto.className} bg-white dark:bg-black min-h-screen text-black dark:text-white `}>
+      <body className={`${bricolage.variable} ${montserrat.className} bg-white dark:bg-[#121212] min-h-screen text-black dark:text-white `}>
         <Header />
         {children}
         <Footer />

@@ -40,3 +40,9 @@ body {
     box-shadow: 0 0 10px #ff9800, 0 0 15px #fb8c00, 0 0 20px #f57c00, 0 0 25px #ef6c00;
   }
 }
+
+.bricolage {
+  font-family: var(--font-bricolage);
+}
+
+

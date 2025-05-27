@@ -20,7 +20,7 @@ export default function Lessons() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100 dark:bg-[#121212] max-w-7xl mx-auto">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
           Rust Lessons
@@ -41,7 +41,7 @@ export default function Lessons() {
               key={index}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
+              className="bg-black/10 dark:bg-white/10 p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-xl hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-[350px] overflow-hidden h-0 pb-[56.25%] rounded-lg">

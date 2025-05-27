@@ -12,7 +12,7 @@ export default function ProjectsSection() {
           Rust Projects
         </h2>
         <div className="flex flex-wrap justify-evenly gap-8">
-          {projects.slice(0, 5).map((project, index) => <Card item={project} key={index} />)}
+          {projects.slice(0, 5).map((project, index) => <Card key={index} item={project} index={index} />)}
         </div>
       </div>
     </section>

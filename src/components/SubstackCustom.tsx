@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import confetti from "canvas-confetti";
+import { Loader2 } from "lucide-react";
 
 export default function SubstackCustom() {
   const [email, setEmail] = useState("");
@@ -68,7 +69,7 @@ export default function SubstackCustom() {
       >
         <label
           htmlFor="email"
-          className="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2"
+          className="block text-sm lg:text-base font-medium text-gray-700 dark:text-gray-300 mb-2"
         >
           Join 2600+ Rust Devs. Subscribe to get exclusive stuff
         </label>
@@ -81,7 +82,7 @@ export default function SubstackCustom() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1 px-4 py-2 border-4 bg-transparent text-gray-900 dark:text-white focus:outline-none rounded-l-md transition-colors duration-300"
+            className="text-sm lg:text-base flex-1 px-4 py-2 border-2 bg-white dark:bg-[#121212] text-gray-900 dark:text-white focus:outline-none rounded-l-full transition-colors duration-300"
             style={{
               borderColor: "#f97316", // Orange border
               borderRight: "none",
@@ -89,19 +90,15 @@ export default function SubstackCustom() {
           />
           <button
             type="submit"
-            className={`px-4 py-2 text-white rounded-r-md transition duration-300 flex items-center justify-center
+            className={`px-4 py-2 text-white rounded-r-full transition duration-300 flex items-center justify-center
               ${isSubscribed ? "bg-gradient-to-r from-orange-500 to-orange-700" : "bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-yellow-600"}
-              group-hover:border-red-500 cursor-pointer`}
+              group-hover:border-red-500 cursor-pointer min-w-[100px] lg:min-w-[120px] text-sm lg:text-base`}
             disabled={isLoading || isSubscribed}
-            style={{
-              borderRadius: "0 0.375rem 0.375rem 0",
-              minWidth: "120px", // Ensures the button width does not change when showing the checkmark
-            }}
           >
             {isSubscribed ? (
               <FaCheck />
             ) : isLoading ? (
-              <span className="spinner"></span>
+              <Loader2 className="animate-spin" />
             ) : (
               "Subscribe"
             )}

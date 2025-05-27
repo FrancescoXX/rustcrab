@@ -11,7 +11,7 @@ export default function DevToolsSection() {
       </h2>
         <div className="grid md:grid-cols-3 w-full gap-5">
           {tools.slice(0, 3).map((tool, index) => (
-            <Card item={tool} key={index} />
+            <Card key={index} item={tool} index={index} />
           ))}
         </div>
       </div>

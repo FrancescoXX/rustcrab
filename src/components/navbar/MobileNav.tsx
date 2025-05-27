@@ -1,4 +1,5 @@
 'use client';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -51,12 +52,12 @@ const MobileNav: React.FC = () => {
   return (
     <div className="relative">
       <button onClick={handleMenuToggle} className="text-2xl">
-        {menuOpen ? <FaTimes /> : <FaBars />}
+        {menuOpen ? <X /> : <Menu />}
       </button>
       {menuOpen && (
         <ul
           ref={menuRef}
-          className="absolute left-0 top-12 py-2 w-48 bg-white dark:bg-black border rounded-lg shadow-lg z-50"
+          className="absolute left-0 top-12 py-2 w-48 bg-white dark:bg-[#121212] border rounded-lg shadow-lg z-50"
         >
           {menuItems.map((item, index) => (
             <Link

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface GitHubStarsProps {
   repo: string;
@@ -10,7 +10,7 @@ interface GitHubStarsProps {
 export default function GitHubStars({ repo }: GitHubStarsProps) {
   const [stars, setStars] = useState<number | null>(null);
 
-  async function fetchStars() {
+  const fetchStars = useCallback(async () => {
     try {
       const response = await fetch(`https://api.github.com/repos/${repo}`);
       const data = await response.json();
@@ -18,11 +18,11 @@ export default function GitHubStars({ repo }: GitHubStarsProps) {
     } catch (error) {
       console.error("Error fetching GitHub stars:", error);
     }
-  }
+  }, [repo]);
 
   useEffect(() => {
     fetchStars();
-  }, [repo]);
+  }, [fetchStars]);
 
   if (stars === null) {
     return <div>Loading...</div>;

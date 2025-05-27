@@ -21,7 +21,7 @@ export default function DevTools() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-black">
+    <div className="min-h-screen bg-gray-100 dark:bg-[#121212] max-w-7xl mx-auto">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
           Rust Developer Tools
@@ -36,7 +36,7 @@ export default function DevTools() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-5">
           {filteredTools.map((tool, index) => (
-            <Card item={tool} key={index} />
+            <Card key={index} item={tool} index={index} />
           ))}
         </div>
 

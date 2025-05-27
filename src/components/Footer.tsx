@@ -6,7 +6,7 @@ export default function Footer() {
   const today = new Date()
   const currentYear = today.getFullYear()
   return (
-    <footer className="flex flex-col items-center justify-center space-y-4 p-4 border-t-2 bg-white dark:bg-black">
+    <footer className="flex flex-col items-center justify-center space-y-4 p-4 border-t-2 bg-white dark:bg-[#121212]">
       <div className="flex justify-center space-x-6">
         <Link href="https://x.com/FrancescoCiull4" target="_blank" rel="noopener noreferrer" className="text-2xl text-black dark:text-white hover:text-black hover:scale-125 transform transition duration-400">
           <FaXTwitter />

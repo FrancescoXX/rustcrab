@@ -11,7 +11,7 @@ export default function BooksSection() {
       </h2>
         <div className="grid md:grid-cols-2 w-full gap-5">
           {books.slice(0, 3).map((book, index) => (
-            <Card item={book} key={index} />
+            <Card key={index} item={book} index={index} />
           ))}
         </div>
       </div>
