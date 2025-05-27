@@ -56,6 +56,7 @@ export default function Home() {
                         <a
                           href="https://github.com/FrancescoXX/rustcrab"
                           target="_blank"
+                          aria-label="Preorder the Rust programming book - opens in new tab"
                           rel="noopener noreferrer"
                         >
                           <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500 relative">

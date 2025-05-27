@@ -1,12 +1,11 @@
 "use client"; // This directive marks the component as a Client Component
 import { useState, useEffect } from "react";
-import { FaGithub, FaSun, FaMoon, FaStar } from "react-icons/fa";
+import { FaSun, FaMoon, FaStar } from "react-icons/fa";
 import Image from "next/image";
 import Navbar from "./navbar/Navbar";
 import MobileNav from "./navbar/MobileNav";
 import Link from "next/link";
 import { SiGithub, SiRust } from "react-icons/si";
-import { Star } from "lucide-react";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
