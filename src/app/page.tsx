@@ -29,25 +29,6 @@ export default function Home() {
               <div className="mx-auto max-w-2xl lg:col-span-6 lg:flex lg:items-center justify-center text-center">
                 <div className="relative z-10 lg:h-auto pt-[90px] lg:pt-[90px] lg:min-h-[300px] flex flex-col items-center justify-center sm:mx-auto md:w-3/4 lg:mx-0 lg:w-full gap-4 lg:gap-8">
                   <div className="flex flex-col items-center">
-                    <div className="z-40 w-full flex justify-center -mt-4 lg:-mt-12 mb-8">
-                      <div className="relative w-fit max-w-xl flex justify-center">
-                        <a
-                          href="https://mybook.to/YJI6DI"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-black/10 dark:bg-white/10 border-black/20 dark:border-white/20 announcement-link group/announcement relative flex flex-row items-center p-1 pr-3 text-sm w-auto gap-2 text-left rounded-full bg-opacity-20 border border-secondary-border hover:border-secondary-strongerborder shadow-md overflow-hidden focus-visible:outline-none focus-visible:ring-brand-600 focus-visible:ring-2 focus-visible:rounded-full"
-                        >
-                          <div className="border-black/20 dark:border-white/20 inline-flex items-center bg-opacity-10 px-3 rounded-full text-sm py-1 announcement-badge">
-                            Preorder the Rust Book 📖
-                          </div>
-                          <MoveRight
-                            strokeWidth={1}
-                            className="text-lightprimary-text dark:text-primary-text ml-2 -translate-x-1 transition-transform group-hover/announcement:translate-x-0"
-                          />
-                          <div className="absolute inset-0 -z-10 bg-gradient-to-br opacity-70 group-hover/announcement:opacity-100 transition-opacity overflow-hidden rounded-full from-background-surface-100 to-background-surface-300 backdrop-blur-md " />
-                        </a>
-                      </div>
-                    </div>
                     <h1 className="bricolage text-foreground font-extrabold text-3xl lg:text-5xl tracking-tight select-none">
                       <span className="block cursor-pointer text-lightprimary-text dark:text-primary-text lg:mb-2">
                         Learn everything about Rust
@@ -101,6 +82,25 @@ export default function Home() {
                   </div>
                   <div className="w-full mt-5">
                     <SubstackCustom />
+                  </div>
+                  <div className="z-40 w-full flex justify-center">
+                    <div className="relative w-fit max-w-xl flex justify-center">
+                      <a
+                        href="https://mybook.to/YJI6DI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-black/10 dark:bg-white/10 border-black/20 dark:border-white/20 announcement-link group/announcement relative flex flex-row items-center p-1 pr-3 text-sm w-auto gap-2 text-left rounded-full bg-opacity-20 border border-secondary-border hover:border-secondary-strongerborder shadow-md overflow-hidden focus-visible:outline-none focus-visible:ring-brand-600 focus-visible:ring-2 focus-visible:rounded-full"
+                      >
+                        <div className="border-black/20 dark:border-white/20 inline-flex items-center bg-opacity-10 px-3 rounded-full text-sm py-1 announcement-badge">
+                          Preorder the Rust Book 📖
+                        </div>
+                        <MoveRight
+                          strokeWidth={1}
+                          className="text-lightprimary-text dark:text-primary-text ml-2 -translate-x-1 transition-transform group-hover/announcement:translate-x-0"
+                        />
+                        <div className="absolute inset-0 -z-10 bg-gradient-to-br opacity-70 group-hover/announcement:opacity-100 transition-opacity overflow-hidden rounded-full from-background-surface-100 to-background-surface-300 backdrop-blur-md " />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
